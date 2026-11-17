@@ -1,3 +1,0 @@
-[console_scripts]
-m1_node = team4s_control.m1_node:main
-
