@@ -1,0 +1,25 @@
+[1.215s] Invoking command in '/home/mf-wsl/team4s/src/team4s_control': AMENT_PREFIX_PATH=/home/mf-wsl/team4s/install/team4s_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mf-wsl/team4s/install/team4s_interfaces LD_LIBRARY_PATH=/home/mf-wsl/team4s/install/team4s_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mf-wsl/team4s/build/team4s_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages:/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/team4s_control build --build-base /home/mf-wsl/team4s/build/team4s_control/build install --record /home/mf-wsl/team4s/build/team4s_control/install.log --install-scripts $base/lib/team4s_control --single-version-externally-managed install_data
+[1.554s] running egg_info
+[1.556s] writing ../../build/team4s_control/team4s_control.egg-info/PKG-INFO
+[1.556s] writing dependency_links to ../../build/team4s_control/team4s_control.egg-info/dependency_links.txt
+[1.557s] writing entry points to ../../build/team4s_control/team4s_control.egg-info/entry_points.txt
+[1.557s] writing requirements to ../../build/team4s_control/team4s_control.egg-info/requires.txt
+[1.557s] writing top-level names to ../../build/team4s_control/team4s_control.egg-info/top_level.txt
+[1.559s] reading manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'
+[1.560s] adding license file 'LICENSE'
+[1.561s] writing manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'
+[1.561s] running build
+[1.561s] running build_py
+[1.562s] copying team4s_control/m1_node.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+[1.562s] running install
+[1.563s] running install_lib
+[1.564s] copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/m1_node.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+[1.565s] byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/m1_node.py to m1_node.cpython-310.pyc
+[1.567s] running install_data
+[1.567s] running install_egg_info
+[1.570s] removing '/home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.570s] Copying ../../build/team4s_control/team4s_control.egg-info to /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control-0.0.0-py3.10.egg-info
+[1.573s] running install_scripts
+[1.602s] Installing m1_node script to /home/mf-wsl/team4s/install/team4s_control/lib/team4s_control
+[1.602s] writing list of installed files to '/home/mf-wsl/team4s/build/team4s_control/install.log'
+[1.630s] Invoked command in '/home/mf-wsl/team4s/src/team4s_control' returned '0': AMENT_PREFIX_PATH=/home/mf-wsl/team4s/install/team4s_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mf-wsl/team4s/install/team4s_interfaces LD_LIBRARY_PATH=/home/mf-wsl/team4s/install/team4s_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mf-wsl/team4s/build/team4s_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages:/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/team4s_control build --build-base /home/mf-wsl/team4s/build/team4s_control/build install --record /home/mf-wsl/team4s/build/team4s_control/install.log --install-scripts $base/lib/team4s_control --single-version-externally-managed install_data

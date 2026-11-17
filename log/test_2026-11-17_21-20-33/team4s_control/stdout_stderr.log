@@ -1,0 +1,576 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/mf-wsl/team4s/build/team4s_control/.pytest_cache
+rootdir: /home/mf-wsl/team4s/src/team4s_control
+plugins: ament-lint-0.12.15, ament-flake8-0.12.15, launch-testing-1.0.15, ament-copyright-0.12.15, launch-testing-ros-0.19.14, ament-xmllint-0.12.15, ament-pep257-0.12.15, cov-3.0.0, colcon-core-0.21.3
+collected 3 items
+
+test/test_copyright.py s                                                 [ 33%]
+test/test_flake8.py F                                                    [ 66%]
+test/test_pep257.py F                                                    [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_flake8 __________________________________
+test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 57 code style errors / warnings:
+E     ./team4s_control/contract.py:9:100: E501 line too long (101 > 99 characters)
+E     ./team4s_control/contract.py:76:24: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:76:24: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:84:7: E221 multiple spaces before operator
+E     ./team4s_control/contract.py:85:8: E221 multiple spaces before operator
+E     ./team4s_control/contract.py:87:24: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:87:24: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:88:24: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:88:24: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:162:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:163:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:164:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:178:39: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:178:39: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:179:39: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:179:39: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:180:39: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:180:39: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:182:39: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:182:39: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:190:40: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:190:40: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:192:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:193:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:195:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:197:40: E114 indentation is not a multiple of 4 (comment)
+E     ./team4s_control/contract.py:197:40: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:207:45: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:214:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:217:37: E116 unexpected indentation (comment)
+E     ./team4s_control/contract.py:223:36: E261 at least two spaces before inline comment
+E     ./team4s_control/contract.py:224:36: E261 at least two spaces before inline comment
+E     ./team4s_control/contract.py:276:1: E302 expected 2 blank lines, found 1
+E     ./team4s_control/contract.py:300:1: E302 expected 2 blank lines, found 1
+E     ./team4s_control/contract.py:305:1: E302 expected 2 blank lines, found 1
+E     ./team4s_control/contract.py:309:1: E302 expected 2 blank lines, found 1
+E     ./team4s_control/contract.py:321:1: E302 expected 2 blank lines, found 1
+E     ./team4s_control/m1_node_v2.py:67:1: F401 'contract.V_CRUISE' imported but unused
+E     ./team4s_control/m1_node_v2.py:67:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node_v2.py:74:1: F401 'adapter_v2.g' imported but unused
+E     ./team4s_control/m1_node_v2.py:74:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node_v2.py:75:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node_v2.py:136:100: E501 line too long (100 > 99 characters)
+E     ./team4s_control/m1_node_v2.py:527:32: E128 continuation line under-indented for visual indent
+E     ./team4s_control/m1_node.py:40:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:41:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:42:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:43:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:44:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:46:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:47:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:48:1: E402 module level import not at top of file
+E     ./team4s_control/m1_node.py:49:1: F401 'chassis_sink.ChassisSink' imported but unused
+E     ./team4s_control/m1_node.py:49:1: E402 module level import not at top of file
+E     ./team4s_control/adapter_v2.py:63:1: E402 module level import not at top of file
+E     ./team4s_control/adapter_v2.py:493:100: E501 line too long (108 > 99 characters)
+E     ./team4s_control/adapter_v2.py:711:9: F841 local variable 'hstate' is assigned to but never used
+E   assert 1 == 0
+----------------------------- Captured stdout call -----------------------------
+
+./team4s_control/contract.py:9:100: E501 line too long (101 > 99 characters)
+from __future__ import annotations   # Py3.8 兼容：float | None / dict[str, ...] 等仅作字符串注解（Foxy 容器 Py3.8）
+                                                                                                   ^
+
+./team4s_control/contract.py:76:24: E114 indentation is not a multiple of 4 (comment)
+                       # 因为障碍距离来自 RangeReading.distance_m 的真实米值，不是推算
+                       ^
+
+./team4s_control/contract.py:76:24: E116 unexpected indentation (comment)
+                       # 因为障碍距离来自 RangeReading.distance_m 的真实米值，不是推算
+                       ^
+
+./team4s_control/contract.py:84:7: E221 multiple spaces before operator
+V_SLOW   = 0.25        # 减速目标，约巡航的 65%（降幅 35%；HANDOFF §10 T2 验收要求降幅≥30%）
+      ^
+
+./team4s_control/contract.py:85:8: E221 multiple spaces before operator
+V_AVOID  = 0.29        # 避障，维持原比例约巡航的 76%（旧 0.25/0.33）
+       ^
+
+./team4s_control/contract.py:87:24: E114 indentation is not a multiple of 4 (comment)
+                       # 旧值 0.19 按旧减速度 0.40m/s² 外推，会让车提前停 8~9cm，
+                       ^
+
+./team4s_control/contract.py:87:24: E116 unexpected indentation (comment)
+                       # 旧值 0.19 按旧减速度 0.40m/s² 外推，会让车提前停 8~9cm，
+                       ^
+
+./team4s_control/contract.py:88:24: E114 indentation is not a multiple of 4 (comment)
+                       # 过不了 ±5cm —— HANDOFF §0 结论二。实测制动距离 0.044m @duty 0.08）
+                       ^
+
+./team4s_control/contract.py:88:24: E116 unexpected indentation (comment)
+                       # 过不了 ±5cm —— HANDOFF §0 结论二。实测制动距离 0.044m @duty 0.08）
+                       ^
+
+./team4s_control/contract.py:162:37: E116 unexpected indentation (comment)
+                                    #    恒 0，**不可当前馈用**。要算必须先有米值：
+                                    ^
+
+./team4s_control/contract.py:163:37: E116 unexpected indentation (comment)
+                                    #    在米域拟合多项式取 C2（单位 1/m），像素域的
+                                    ^
+
+./team4s_control/contract.py:164:37: E116 unexpected indentation (comment)
+                                    #    "图像曲率"差一个随距离变的透视因子，不能替代。
+                                    ^
+
+./team4s_control/contract.py:178:39: E114 indentation is not a multiple of 4 (comment)
+                                      # （LaneObservation.metric_reference_x_m）
+                                      ^
+
+./team4s_control/contract.py:178:39: E116 unexpected indentation (comment)
+                                      # （LaneObservation.metric_reference_x_m）
+                                      ^
+
+./team4s_control/contract.py:179:39: E114 indentation is not a multiple of 4 (comment)
+                                      # M2 做 Stanley / 前视补偿时必须知道这一点：
+                                      ^
+
+./team4s_control/contract.py:179:39: E116 unexpected indentation (comment)
+                                      # M2 做 Stanley / 前视补偿时必须知道这一点：
+                                      ^
+
+./team4s_control/contract.py:180:39: E114 indentation is not a multiple of 4 (comment)
+                                      # 0.5 m 处的偏差和 1.0 m 处的偏差不能套同一条增益
+                                      ^
+
+./team4s_control/contract.py:180:39: E116 unexpected indentation (comment)
+                                      # 0.5 m 处的偏差和 1.0 m 处的偏差不能套同一条增益
+                                      ^
+
+./team4s_control/contract.py:182:39: E114 indentation is not a multiple of 4 (comment)
+                                      # 用于赛后对账：这一轮的成绩是哪版标定跑出来的
+                                      ^
+
+./team4s_control/contract.py:182:39: E116 unexpected indentation (comment)
+                                      # 用于赛后对账：这一轮的成绩是哪版标定跑出来的
+                                      ^
+
+./team4s_control/contract.py:190:40: E114 indentation is not a multiple of 4 (comment)
+                                       #    恒 99.0，禁止消费；起步判据只看 start_seen。
+                                       ^
+
+./team4s_control/contract.py:190:40: E116 unexpected indentation (comment)
+                                       #    恒 99.0，禁止消费；起步判据只看 start_seen。
+                                       ^
+
+./team4s_control/contract.py:192:37: E116 unexpected indentation (comment)
+                                    #    ⚠ 只作记忆/日志；**FINISH 判据用 extra.red_visible_now**
+                                    ^
+
+./team4s_control/contract.py:193:37: E116 unexpected indentation (comment)
+                                    #    （当前帧可见性），否则任务一起步就把起点红锥当终点。
+                                    ^
+
+./team4s_control/contract.py:195:37: E116 unexpected indentation (comment)
+                                    #    终点判据 = 红锥 bbox 底边行阈值（NodeCfg.end_trig_y2）。
+                                    ^
+
+./team4s_control/contract.py:197:40: E114 indentation is not a multiple of 4 (comment)
+                                       #    斑马线判据 = bbox 底边行阈值（NodeCfg.zebra_trig_y2）。
+                                       ^
+
+./team4s_control/contract.py:197:40: E116 unexpected indentation (comment)
+                                       #    斑马线判据 = bbox 底边行阈值（NodeCfg.zebra_trig_y2）。
+                                       ^
+
+./team4s_control/contract.py:207:45: E116 unexpected indentation (comment)
+                                            #    + 像素行阈值），此字段可以删。
+                                            ^
+
+./team4s_control/contract.py:214:37: E116 unexpected indentation (comment)
+                                    #    必须同时看 ctx.extra.ranging_state=='ok' 才可信
+                                    ^
+
+./team4s_control/contract.py:217:37: E116 unexpected indentation (comment)
+                                    #    （M3 判断"能不能绕过"只能靠 left/right_clear + 重新勘测）
+                                    ^
+
+./team4s_control/contract.py:223:36: E261 at least two spaces before inline comment
+    right_clear_known: bool = False # ① 直译：右侧空间是否被真正检查过
+                                   ^
+
+./team4s_control/contract.py:224:36: E261 at least two spaces before inline comment
+    right_clear: bool | None = None # ① 直译：右侧能否通行。None = **不知道**
+                                   ^
+
+./team4s_control/contract.py:276:1: E302 expected 2 blank lines, found 1
+def arbitrate(candidates: dict[str, Command], table: dict[str, int]) -> Command:
+^
+
+./team4s_control/contract.py:300:1: E302 expected 2 blank lines, found 1
+def want_avoid(ctx: Ctx, obst_db: bool) -> bool:
+^
+
+./team4s_control/contract.py:305:1: E302 expected 2 blank lines, found 1
+def want_finish(ctx: Ctx, end_db: bool) -> bool:
+^
+
+./team4s_control/contract.py:309:1: E302 expected 2 blank lines, found 1
+def want_junction(ctx: Ctx) -> bool:
+^
+
+./team4s_control/contract.py:321:1: E302 expected 2 blank lines, found 1
+def snapshot_stale(last_recv_age: float, timeout: float = STALE_TIMEOUT) -> bool:
+^
+
+./team4s_control/m1_node_v2.py:67:1: F401 'contract.V_CRUISE' imported but unused
+from contract import (
+^
+
+./team4s_control/m1_node_v2.py:67:1: E402 module level import not at top of file
+from contract import (
+^
+
+./team4s_control/m1_node_v2.py:74:1: F401 'adapter_v2.g' imported but unused
+from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health, g
+^
+
+./team4s_control/m1_node_v2.py:74:1: E402 module level import not at top of file
+from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health, g
+^
+
+./team4s_control/m1_node_v2.py:75:1: E402 module level import not at top of file
+from task_state_bridge import (
+^
+
+./team4s_control/m1_node_v2.py:136:100: E501 line too long (100 > 99 characters)
+    """
+    用法（ROS2 节点里）:
+        node.m1 = M1NodeV2(task_id=1, m2=m2_track.decide, m3=m3_avoid.decide, m4=m4_slowdown.decide)
+        # 订阅回调
+        def on_msg(msg):
+            node.m1.on_snapshot(msg, node.now_s())
+        # timer 0.05
+        def tick():
+            node.m1.tick(node.now_s(), dt)
+            node.cmd_pub.publish(to_cmd(node.m1.last_cmd))
+            ts = node.m1.publish_task_state(node.now_ns())     # 10Hz 心跳，返回 None 表示这拍不发
+            if ts is not None:
+                node.ts_pub.publish(fill(TaskState(), ts))
+    """
+       
+                 
+                                                                         ^
+
+./team4s_control/m1_node_v2.py:527:32: E128 continuation line under-indented for visual indent
+                               source=source or self.ctx.state.name)
+                               ^
+
+./team4s_control/m1_node.py:40:1: E402 module level import not at top of file
+import rclpy
+^
+
+./team4s_control/m1_node.py:41:1: E402 module level import not at top of file
+from rclpy.node import Node
+^
+
+./team4s_control/m1_node.py:42:1: E402 module level import not at top of file
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
+^
+
+./team4s_control/m1_node.py:43:1: E402 module level import not at top of file
+from std_msgs.msg import Bool
+^
+
+./team4s_control/m1_node.py:44:1: E402 module level import not at top of file
+from team4s_interfaces.msg import PerceptionSnapshot, TaskState
+^
+
+./team4s_control/m1_node.py:46:1: E402 module level import not at top of file
+from contract import STEER_CENTER, speed_to_duty
+^
+
+./team4s_control/m1_node.py:47:1: E402 module level import not at top of file
+from m1_node_v2 import M1NodeV2, NodeCfg
+^
+
+./team4s_control/m1_node.py:48:1: E402 module level import not at top of file
+from task_state_bridge import _fill_msg
+^
+
+./team4s_control/m1_node.py:49:1: F401 'chassis_sink.ChassisSink' imported but unused
+from chassis_sink import ChassisSink, LogSink, NullSink
+^
+
+./team4s_control/m1_node.py:49:1: E402 module level import not at top of file
+from chassis_sink import ChassisSink, LogSink, NullSink
+^
+
+./team4s_control/adapter_v2.py:63:1: E402 module level import not at top of file
+from contract import Ctx, LaneError, NO_DETECTION, BASE_FRAME, PERCEPTION_MAX_AGE_S
+^
+
+./team4s_control/adapter_v2.py:493:100: E501 line too long (108 > 99 characters)
+        if self.cfg.metric_image_size and (img_w, img_h) not in ((0, 0), tuple(self.cfg.metric_image_size)):
+                                                                                                   ^
+
+./team4s_control/adapter_v2.py:711:9: F841 local variable 'hstate' is assigned to but never used
+        hstate = int(g(h, 'state', HEALTH_MISSING) or 0)
+        ^
+
+9     E114 indentation is not a multiple of 4 (comment)
+18    E116 unexpected indentation (comment)
+1     E128 continuation line under-indented for visual indent
+2     E221 multiple spaces before operator
+2     E261 at least two spaces before inline comment
+5     E302 expected 2 blank lines, found 1
+13    E402 module level import not at top of file
+3     E501 line too long (108 > 99 characters)
+3     F401 'chassis_sink.ChassisSink' imported but unused
+1     F841 local variable 'hstate' is assigned to but never used
+
+13 files checked
+57 errors
+
+'E'-type errors: 53
+'F'-type errors: 4
+
+Checked files:
+
+* ./setup.py
+* ./launch/m1.launch.py
+* ./test/test_flake8.py
+* ./test/test_copyright.py
+* ./test/test_pep257.py
+* ./test/test_smoke.py
+* ./team4s_control/contract.py
+* ./team4s_control/__init__.py
+* ./team4s_control/task_state_bridge.py
+* ./team4s_control/chassis_sink.py
+* ./team4s_control/m1_node_v2.py
+* ./team4s_control/m1_node.py
+* ./team4s_control/adapter_v2.py
+----------------------------- Captured stderr call -----------------------------
+option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+_________________________________ test_pep257 __________________________________
+test/test_pep257.py:23: in test_pep257
+    assert rc == 0, 'Found code style errors / warnings'
+E   AssertionError: Found code style errors / warnings
+E   assert 1 == 0
+----------------------------- Captured stdout call -----------------------------
+checking ./launch/m1.launch.py
+./launch/m1.launch.py:1 at module level: D400: First line should end with a period (not '）')
+./launch/m1.launch.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+checking ./setup.py
+checking ./team4s_control/__init__.py
+checking ./team4s_control/adapter_v2.py
+./team4s_control/adapter_v2.py:1 at module level: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/adapter_v2.py:1 at module level: D400: First line should end with a period (not '层')
+./team4s_control/adapter_v2.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '层')
+./team4s_control/adapter_v2.py:167 in public class `Extra`: D204: 1 blank line required after class docstring (found 0)
+./team4s_control/adapter_v2.py:167 in public class `Extra`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:167 in public class `Extra`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:229 in public function `g`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:229 in public function `g`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:253 in public function `stamp_seconds`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:253 in public function `stamp_seconds`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:275 in public method `reset_events`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/adapter_v2.py:275 in public method `reset_events`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:275 in public method `reset_events`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:288 in public method `to_ctx`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:288 in public method `to_ctx`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:308 in private method `_check_run_id`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:308 in private method `_check_run_id`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:576 in private method `_hold_or_clear`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:576 in private method `_hold_or_clear`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:686 in private method `_cone_y2`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:686 in private method `_cone_y2`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:810 in public function `read_health`: D400: First line should end with a period (not '。')
+./team4s_control/adapter_v2.py:810 in public function `read_health`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D400: First line should end with a period (not ')')
+./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D415: First line should end with a period, question mark, or exclamation point (not ')')
+checking ./team4s_control/chassis_sink.py
+./team4s_control/chassis_sink.py:1 at module level: D400: First line should end with a period (not '）')
+./team4s_control/chassis_sink.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./team4s_control/chassis_sink.py:24 in public class `ChassisSink`: D400: First line should end with a period (not '。')
+./team4s_control/chassis_sink.py:24 in public class `ChassisSink`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/chassis_sink.py:31 in public class `NullSink`: D400: First line should end with a period (not '。')
+./team4s_control/chassis_sink.py:31 in public class `NullSink`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/chassis_sink.py:47 in public class `LogSink`: D400: First line should end with a period (not '。')
+./team4s_control/chassis_sink.py:47 in public class `LogSink`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking ./team4s_control/contract.py
+./team4s_control/contract.py:1 at module level: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/contract.py:1 at module level: D400: First line should end with a period (not '）')
+./team4s_control/contract.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./team4s_control/contract.py:112 in public function `speed_to_duty`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:112 in public function `speed_to_duty`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:112 in public function `speed_to_duty`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:126 in public function `duty_to_speed`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:126 in public function `duty_to_speed`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:234 in public method `velocity`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:234 in public method `velocity`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:234 in public method `velocity`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:260 in public class `Command`: D204: 1 blank line required after class docstring (found 0)
+./team4s_control/contract.py:260 in public class `Command`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:260 in public class `Command`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:260 in public class `Command`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:277 in public function `arbitrate`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/contract.py:277 in public function `arbitrate`: D209: Multi-line docstring closing quotes should be on a separate line
+./team4s_control/contract.py:277 in public function `arbitrate`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:277 in public function `arbitrate`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:277 in public function `arbitrate`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:297 in public function `want_track`: D400: First line should end with a period (not '）')
+./team4s_control/contract.py:297 in public function `want_track`: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./team4s_control/contract.py:301 in public function `want_avoid`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:301 in public function `want_avoid`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:306 in public function `want_finish`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:306 in public function `want_finish`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:310 in public function `want_junction`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:310 in public function `want_junction`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:310 in public function `want_junction`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:322 in public function `snapshot_stale`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:322 in public function `snapshot_stale`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:322 in public function `snapshot_stale`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/contract.py:322 in public function `snapshot_stale`: D403: First word of the first line should be properly capitalized ('Snapshot', not 'snapshot')
+./team4s_control/contract.py:337 in public function `want_estop`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/contract.py:337 in public function `want_estop`: D209: Multi-line docstring closing quotes should be on a separate line
+./team4s_control/contract.py:337 in public function `want_estop`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/contract.py:337 in public function `want_estop`: D400: First line should end with a period (not '。')
+./team4s_control/contract.py:337 in public function `want_estop`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking ./team4s_control/m1_node.py
+./team4s_control/m1_node.py:1 at module level: D400: First line should end with a period (not '）')
+./team4s_control/m1_node.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./team4s_control/m1_node.py:66 in public class `M1ControlNode`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node.py:66 in public class `M1ControlNode`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node.py:116 in private method `_now`: D209: Multi-line docstring closing quotes should be on a separate line
+./team4s_control/m1_node.py:116 in private method `_now`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node.py:116 in private method `_now`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node.py:116 in private method `_now`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node.py:164 in public method `emergency_stop`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node.py:164 in public method `emergency_stop`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking ./team4s_control/m1_node_v2.py
+./team4s_control/m1_node_v2.py:1 at module level: D400: First line should end with a period (not '）')
+./team4s_control/m1_node_v2.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D204: 1 blank line required after class docstring (found 0)
+./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D400: First line should end with a period (not ':')
+./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D415: First line should end with a period, question mark, or exclamation point (not ':')
+./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D209: Multi-line docstring closing quotes should be on a separate line
+./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D400: First line should end with a period (not '，')
+./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D415: First line should end with a period, question mark, or exclamation point (not '，')
+./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D400: First line should end with a period (not '：')
+./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D415: First line should end with a period, question mark, or exclamation point (not '：')
+./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:459 in private method `_run_behaviors`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:459 in private method `_run_behaviors`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/m1_node_v2.py:543 in public method `task_state`: D400: First line should end with a period (not '。')
+./team4s_control/m1_node_v2.py:543 in public method `task_state`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking ./team4s_control/task_state_bridge.py
+./team4s_control/task_state_bridge.py:1 at module level: D400: First line should end with a period (not '布')
+./team4s_control/task_state_bridge.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '布')
+./team4s_control/task_state_bridge.py:91 in public function `state_to_phase`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:91 in public function `state_to_phase`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:171 in public function `generate_run_id`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:171 in public function `generate_run_id`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:187 in public function `generate_controller_session_id`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:187 in public function `generate_controller_session_id`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:235 in public method `new_run`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:235 in public method `new_run`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D205: 1 blank line required between summary line and description (found 0)
+./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D209: Multi-line docstring closing quotes should be on a separate line
+./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D400: First line should end with a period (not '，')
+./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D415: First line should end with a period, question mark, or exclamation point (not '，')
+./team4s_control/task_state_bridge.py:259 in public method `build`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:259 in public method `build`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:291 in public method `offer`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:291 in public method `offer`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:312 in private method `_reason`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:312 in private method `_reason`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:312 in private method `_reason`: D403: First word of the first line should be properly capitalized ('Reason', not 'reason')
+./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D213: Multi-line docstring summary should start at the second line
+./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:361 in private function `_fill_msg`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:361 in private function `_fill_msg`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./team4s_control/task_state_bridge.py:377 in public function `is_motion_allowed`: D400: First line should end with a period (not '。')
+./team4s_control/task_state_bridge.py:377 in public function `is_motion_allowed`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking ./test/test_copyright.py
+checking ./test/test_flake8.py
+checking ./test/test_pep257.py
+checking ./test/test_smoke.py
+./test/test_smoke.py:1 at module level: D400: First line should end with a period (not '）')
+./test/test_smoke.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+./test/test_smoke.py:43 in public class `MockTime`: D209: Multi-line docstring closing quotes should be on a separate line
+./test/test_smoke.py:43 in public class `MockTime`: D213: Multi-line docstring summary should start at the second line
+./test/test_smoke.py:43 in public class `MockTime`: D400: First line should end with a period (not '。')
+./test/test_smoke.py:43 in public class `MockTime`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./test/test_smoke.py:60 in public class `MockClock`: D400: First line should end with a period (not '。')
+./test/test_smoke.py:60 in public class `MockClock`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./test/test_smoke.py:97 in public class `MockNode`: D400: First line should end with a period (not '。')
+./test/test_smoke.py:97 in public class `MockNode`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+./test/test_smoke.py:169 in public class `MockTaskState`: D400: First line should end with a period (not '。')
+./test/test_smoke.py:169 in public class `MockTaskState`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+checking test/test_copyright.py
+checking test/test_flake8.py
+checking test/test_pep257.py
+checking test/test_smoke.py
+test/test_smoke.py:1 at module level: D400: First line should end with a period (not '）')
+test/test_smoke.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '）')
+test/test_smoke.py:43 in public class `MockTime`: D209: Multi-line docstring closing quotes should be on a separate line
+test/test_smoke.py:43 in public class `MockTime`: D213: Multi-line docstring summary should start at the second line
+test/test_smoke.py:43 in public class `MockTime`: D400: First line should end with a period (not '。')
+test/test_smoke.py:43 in public class `MockTime`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+test/test_smoke.py:60 in public class `MockClock`: D400: First line should end with a period (not '。')
+test/test_smoke.py:60 in public class `MockClock`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+test/test_smoke.py:97 in public class `MockNode`: D400: First line should end with a period (not '。')
+test/test_smoke.py:97 in public class `MockNode`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+test/test_smoke.py:169 in public class `MockTaskState`: D400: First line should end with a period (not '。')
+test/test_smoke.py:169 in public class `MockTaskState`: D415: First line should end with a period, question mark, or exclamation point (not '。')
+188 errors
+--- generated xml file: /home/mf-wsl/team4s/build/team4s_control/pytest.xml ----
+=========================== short test summary info ============================
+FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 57 code style...
+FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+=================== 2 failed, 1 skipped, 2 warnings in 0.91s ===================
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html

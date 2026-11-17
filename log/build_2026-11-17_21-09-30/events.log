@@ -1,0 +1,729 @@
+[0.000000] (-) TimerEvent: {}
+[0.000378] (team4s_interfaces) JobQueued: {'identifier': 'team4s_interfaces', 'dependencies': OrderedDict()}
+[0.000420] (team4s_control) JobQueued: {'identifier': 'team4s_control', 'dependencies': OrderedDict([('team4s_interfaces', '/home/mf-wsl/team4s/install/team4s_interfaces')])}
+[0.000447] (team4s_interfaces) JobStarted: {'identifier': 'team4s_interfaces'}
+[0.019054] (team4s_interfaces) JobProgress: {'identifier': 'team4s_interfaces', 'progress': 'cmake'}
+[0.024627] (team4s_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/mf-wsl/team4s/src/team4s_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/mf-wsl/team4s/install/team4s_interfaces'], 'cwd': '/home/mf-wsl/team4s/build/team4s_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mf-wsl'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{eab36781-7a15-5893-94d4-af70496f53b5}'), ('HOME', '/home/mf-wsl'), ('OLDPWD', '/home/mf-wsl/team4s'), ('ROS_PYTHON_VERSION', '3'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mf-wsl'), ('NAME', 'localhost'), ('WSL_INTEROP', '/run/WSL/332_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'dumb'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mf-wsl/.qoder-cn/entry:/home/mf-wsl/.local/bin:/home/mf-wsl/.kimi-code/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/Program Files (x86)/VMware/VMware Workstation/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet:/mnt/d/Program Files/Git/cmd:/mnt/d/Program Files/nodejs:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/WINDOWS:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/d/Program Files/MATLAB/R2026a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/WSL/:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/snap/bin:/home/mf-wsl/.local/bin'), ('WT_SESSION', '2030b782-32e3-48db-9675-935529bef583'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GIT_TERMINAL_PROMPT', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mf-wsl/team4s/build/team4s_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.098392] (-) TimerEvent: {}
+[0.198617] (-) TimerEvent: {}
+[0.298814] (-) TimerEvent: {}
+[0.399018] (-) TimerEvent: {}
+[0.461743] (team4s_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.499147] (-) TimerEvent: {}
+[0.599338] (-) TimerEvent: {}
+[0.699648] (-) TimerEvent: {}
+[0.799838] (-) TimerEvent: {}
+[0.900062] (-) TimerEvent: {}
+[1.000334] (-) TimerEvent: {}
+[1.100535] (-) TimerEvent: {}
+[1.200739] (-) TimerEvent: {}
+[1.300975] (-) TimerEvent: {}
+[1.401212] (-) TimerEvent: {}
+[1.501498] (-) TimerEvent: {}
+[1.507369] (team4s_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.601612] (-) TimerEvent: {}
+[1.701841] (-) TimerEvent: {}
+[1.802034] (-) TimerEvent: {}
+[1.902241] (-) TimerEvent: {}
+[2.002449] (-) TimerEvent: {}
+[2.102655] (-) TimerEvent: {}
+[2.191948] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.202735] (-) TimerEvent: {}
+[2.302913] (-) TimerEvent: {}
+[2.403113] (-) TimerEvent: {}
+[2.503321] (-) TimerEvent: {}
+[2.508995] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.518129] (team4s_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.520606] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.521840] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.527552] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.603432] (-) TimerEvent: {}
+[2.703636] (-) TimerEvent: {}
+[2.803861] (-) TimerEvent: {}
+[2.851848] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.861383] (team4s_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.861793] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.862536] (team4s_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.876263] (team4s_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.903973] (-) TimerEvent: {}
+[3.004256] (-) TimerEvent: {}
+[3.104480] (-) TimerEvent: {}
+[3.109029] (team4s_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[3.204596] (-) TimerEvent: {}
+[3.270186] (team4s_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.277475] (team4s_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.290588] (team4s_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[3.304682] (-) TimerEvent: {}
+[3.404877] (-) TimerEvent: {}
+[3.505112] (-) TimerEvent: {}
+[3.605326] (-) TimerEvent: {}
+[3.624356] (team4s_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.698438] (team4s_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.9.2 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[3.705424] (-) TimerEvent: {}
+[3.805571] (-) TimerEvent: {}
+[3.905747] (-) TimerEvent: {}
+[4.005925] (-) TimerEvent: {}
+[4.106123] (-) TimerEvent: {}
+[4.206320] (-) TimerEvent: {}
+[4.216781] (team4s_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.1 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.306422] (-) TimerEvent: {}
+[4.406610] (-) TimerEvent: {}
+[4.506800] (-) TimerEvent: {}
+[4.551055] (team4s_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.606915] (-) TimerEvent: {}
+[4.707090] (-) TimerEvent: {}
+[4.807270] (-) TimerEvent: {}
+[4.907460] (-) TimerEvent: {}
+[4.970429] (team4s_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.007590] (-) TimerEvent: {}
+[5.107800] (-) TimerEvent: {}
+[5.208063] (-) TimerEvent: {}
+[5.223091] (team4s_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.227818] (team4s_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.308203] (-) TimerEvent: {}
+[5.408468] (-) TimerEvent: {}
+[5.508668] (-) TimerEvent: {}
+[5.608864] (-) TimerEvent: {}
+[5.709059] (-) TimerEvent: {}
+[5.809262] (-) TimerEvent: {}
+[5.909482] (-) TimerEvent: {}
+[6.009675] (-) TimerEvent: {}
+[6.021554] (team4s_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[6.021744] (team4s_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.021818] (team4s_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.021879] (team4s_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[6.052633] (team4s_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[6.109789] (-) TimerEvent: {}
+[6.209980] (-) TimerEvent: {}
+[6.310179] (-) TimerEvent: {}
+[6.351929] (team4s_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.410324] (-) TimerEvent: {}
+[6.477182] (team4s_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.497240] (team4s_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/mf-wsl/team4s/build/team4s_interfaces\n'}
+[6.508157] (team4s_interfaces) CommandEnded: {'returncode': 0}
+[6.509086] (team4s_interfaces) JobProgress: {'identifier': 'team4s_interfaces', 'progress': 'build'}
+[6.510191] (team4s_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mf-wsl/team4s/build/team4s_interfaces', '--', '-j32', '-l32'], 'cwd': '/home/mf-wsl/team4s/build/team4s_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mf-wsl'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{eab36781-7a15-5893-94d4-af70496f53b5}'), ('HOME', '/home/mf-wsl'), ('OLDPWD', '/home/mf-wsl/team4s'), ('ROS_PYTHON_VERSION', '3'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mf-wsl'), ('NAME', 'localhost'), ('WSL_INTEROP', '/run/WSL/332_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'dumb'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mf-wsl/.qoder-cn/entry:/home/mf-wsl/.local/bin:/home/mf-wsl/.kimi-code/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/Program Files (x86)/VMware/VMware Workstation/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet:/mnt/d/Program Files/Git/cmd:/mnt/d/Program Files/nodejs:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/WINDOWS:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/d/Program Files/MATLAB/R2026a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/WSL/:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/snap/bin:/home/mf-wsl/.local/bin'), ('WT_SESSION', '2030b782-32e3-48db-9675-935529bef583'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GIT_TERMINAL_PROMPT', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mf-wsl/team4s/build/team4s_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.510798] (-) TimerEvent: {}
+[6.579174] (team4s_interfaces) StdoutLine: {'line': b'[  1%] Generating C code for ROS interfaces\n'}
+[6.594075] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Generating Rust code for ROS interfaces\n'}
+[6.595554] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Generating C++ code for ROS interfaces\n'}
+[6.606490] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_team4s_interfaces\n'}
+[6.610938] (-) TimerEvent: {}
+[6.711130] (-) TimerEvent: {}
+[6.811340] (-) TimerEvent: {}
+[6.911538] (-) TimerEvent: {}
+[6.938689] (team4s_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[6.939389] (team4s_interfaces) StdoutLine: {'line': b'creating team4s_interfaces.egg-info\n'}
+[6.940412] (team4s_interfaces) StdoutLine: {'line': b'writing team4s_interfaces.egg-info/PKG-INFO\n'}
+[6.940733] (team4s_interfaces) StdoutLine: {'line': b'writing dependency_links to team4s_interfaces.egg-info/dependency_links.txt\n'}
+[6.941003] (team4s_interfaces) StdoutLine: {'line': b'writing top-level names to team4s_interfaces.egg-info/top_level.txt\n'}
+[6.941314] (team4s_interfaces) StdoutLine: {'line': b"writing manifest file 'team4s_interfaces.egg-info/SOURCES.txt'\n"}
+[6.944910] (team4s_interfaces) StdoutLine: {'line': b"reading manifest file 'team4s_interfaces.egg-info/SOURCES.txt'\n"}
+[6.945647] (team4s_interfaces) StdoutLine: {'line': b"writing manifest file 'team4s_interfaces.egg-info/SOURCES.txt'\n"}
+[6.977864] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_team4s_interfaces_egg\n'}
+[7.011678] (-) TimerEvent: {}
+[7.111852] (-) TimerEvent: {}
+[7.212043] (-) TimerEvent: {}
+[7.312296] (-) TimerEvent: {}
+[7.412480] (-) TimerEvent: {}
+[7.512681] (-) TimerEvent: {}
+[7.523868] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Built target team4s_interfaces__rs\n'}
+[7.612796] (-) TimerEvent: {}
+[7.712969] (-) TimerEvent: {}
+[7.813383] (-) TimerEvent: {}
+[7.913728] (-) TimerEvent: {}
+[7.967787] (team4s_interfaces) StdoutLine: {'line': b'[  2%] Built target team4s_interfaces__cpp\n'}
+[7.968500] (team4s_interfaces) StdoutLine: {'line': b'[  3%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/source_header__functions.c.o\n'}
+[7.969762] (team4s_interfaces) StdoutLine: {'line': b'[  4%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/lane_observation__functions.c.o\n'}
+[7.969979] (team4s_interfaces) StdoutLine: {'line': b'[  5%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/lane_candidate__functions.c.o\n'}
+[7.971070] (team4s_interfaces) StdoutLine: {'line': b'[  6%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/range_reading__functions.c.o\n'}
+[7.972315] (team4s_interfaces) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/scene_observation__functions.c.o\n'}
+[7.972476] (team4s_interfaces) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/cone_detection__functions.c.o\n'}
+[7.973253] (team4s_interfaces) StdoutLine: {'line': b'[  9%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/perception_snapshot__functions.c.o\n'}
+[7.973632] (team4s_interfaces) StdoutLine: {'line': b'[ 10%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/obstacle_observation__functions.c.o\n'}
+[7.974734] (team4s_interfaces) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/task_state__functions.c.o\n'}
+[7.974893] (team4s_interfaces) StdoutLine: {'line': b'[ 12%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_c.dir/rosidl_generator_c/team4s_interfaces/msg/detail/topic_health__functions.c.o\n'}
+[7.986050] (team4s_interfaces) StdoutLine: {'line': b'[ 14%] Generating C++ type support dispatch for ROS interfaces\n'}
+[7.986264] (team4s_interfaces) StdoutLine: {'line': b'[ 14%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[7.986693] (team4s_interfaces) StdoutLine: {'line': b'[ 15%] Generating C++ introspection for ROS interfaces\n'}
+[8.013888] (-) TimerEvent: {}
+[8.107920] (team4s_interfaces) StdoutLine: {'line': b'[ 16%] Linking C shared library libteam4s_interfaces__rosidl_generator_c.so\n'}
+[8.114003] (-) TimerEvent: {}
+[8.214206] (-) TimerEvent: {}
+[8.314449] (-) TimerEvent: {}
+[8.375385] (team4s_interfaces) StdoutLine: {'line': b'[ 16%] Built target team4s_interfaces__rosidl_generator_c\n'}
+[8.391356] (team4s_interfaces) StdoutLine: {'line': b'[ 17%] Generating C type support for eProsima Fast-RTPS\n'}
+[8.391898] (team4s_interfaces) StdoutLine: {'line': b'[ 18%] Generating C introspection for ROS interfaces\n'}
+[8.392016] (team4s_interfaces) StdoutLine: {'line': b'[ 19%] Generating C type support dispatch for ROS interfaces\n'}
+[8.414629] (-) TimerEvent: {}
+[8.514810] (-) TimerEvent: {}
+[8.614985] (-) TimerEvent: {}
+[8.715189] (-) TimerEvent: {}
+[8.815392] (-) TimerEvent: {}
+[8.915622] (-) TimerEvent: {}
+[9.015805] (-) TimerEvent: {}
+[9.083745] (team4s_interfaces) StdoutLine: {'line': b'[ 20%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/source_header__type_support.cpp.o\n'}
+[9.084553] (team4s_interfaces) StdoutLine: {'line': b'[ 21%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/range_reading__type_support.cpp.o\n'}
+[9.084684] (team4s_interfaces) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/lane_observation__type_support.cpp.o\n'}
+[9.085639] (team4s_interfaces) StdoutLine: {'line': b'[ 23%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/lane_candidate__type_support.cpp.o\n'}
+[9.086105] (team4s_interfaces) StdoutLine: {'line': b'[ 24%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/cone_detection__type_support.cpp.o\n'}
+[9.086675] (team4s_interfaces) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/obstacle_observation__type_support.cpp.o\n'}
+[9.087004] (team4s_interfaces) StdoutLine: {'line': b'[ 26%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/topic_health__type_support.cpp.o\n'}
+[9.087428] (team4s_interfaces) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/task_state__type_support.cpp.o\n'}
+[9.087521] (team4s_interfaces) StdoutLine: {'line': b'[ 28%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/scene_observation__type_support.cpp.o\n'}
+[9.089563] (team4s_interfaces) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/team4s_interfaces/msg/perception_snapshot__type_support.cpp.o\n'}
+[9.114898] (team4s_interfaces) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/source_header__type_support.cpp.o\n'}
+[9.115088] (team4s_interfaces) StdoutLine: {'line': b'[ 31%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/lane_observation__type_support.cpp.o\n'}
+[9.115704] (team4s_interfaces) StdoutLine: {'line': b'[ 32%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/lane_candidate__type_support.cpp.o\n'}
+[9.115994] (-) TimerEvent: {}
+[9.116432] (team4s_interfaces) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/range_reading__type_support.cpp.o\n'}
+[9.117345] (team4s_interfaces) StdoutLine: {'line': b'[ 34%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/cone_detection__type_support.cpp.o\n'}
+[9.118224] (team4s_interfaces) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/topic_health__type_support.cpp.o\n'}
+[9.118409] (team4s_interfaces) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/obstacle_observation__type_support.cpp.o\n'}
+[9.119078] (team4s_interfaces) StdoutLine: {'line': b'[ 38%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/task_state__type_support.cpp.o\n'}
+[9.119728] (team4s_interfaces) StdoutLine: {'line': b'[ 39%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/perception_snapshot__type_support.cpp.o\n'}
+[9.120256] (team4s_interfaces) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/team4s_interfaces/msg/detail/scene_observation__type_support.cpp.o\n'}
+[9.216183] (-) TimerEvent: {}
+[9.316482] (-) TimerEvent: {}
+[9.416773] (-) TimerEvent: {}
+[9.467395] (team4s_interfaces) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/lane_candidate__type_support.cpp.o\n'}
+[9.467761] (team4s_interfaces) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/source_header__type_support.cpp.o\n'}
+[9.467942] (team4s_interfaces) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/range_reading__type_support.cpp.o\n'}
+[9.468199] (team4s_interfaces) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/obstacle_observation__type_support.cpp.o\n'}
+[9.468658] (team4s_interfaces) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/cone_detection__type_support.cpp.o\n'}
+[9.468847] (team4s_interfaces) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/topic_health__type_support.cpp.o\n'}
+[9.469962] (team4s_interfaces) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/lane_observation__type_support.cpp.o\n'}
+[9.470979] (team4s_interfaces) StdoutLine: {'line': b'[ 47%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/scene_observation__type_support.cpp.o\n'}
+[9.483816] (team4s_interfaces) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/perception_snapshot__type_support.cpp.o\n'}
+[9.520194] (-) TimerEvent: {}
+[9.620444] (-) TimerEvent: {}
+[9.710340] (team4s_interfaces) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/source_header__type_support.cpp.o\n'}
+[9.720548] (-) TimerEvent: {}
+[9.724278] (team4s_interfaces) StdoutLine: {'line': b'[ 49%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/team4s_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o\n'}
+[9.735711] (team4s_interfaces) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/lane_candidate__type_support.cpp.o\n'}
+[9.736355] (team4s_interfaces) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/lane_observation__type_support.cpp.o\n'}
+[9.739727] (team4s_interfaces) StdoutLine: {'line': b'[ 52%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/range_reading__type_support.cpp.o\n'}
+[9.752425] (team4s_interfaces) StdoutLine: {'line': b'[ 53%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/obstacle_observation__type_support.cpp.o\n'}
+[9.752906] (team4s_interfaces) StdoutLine: {'line': b'[ 54%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/cone_detection__type_support.cpp.o\n'}
+[9.763828] (team4s_interfaces) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/scene_observation__type_support.cpp.o\n'}
+[9.764216] (team4s_interfaces) StdoutLine: {'line': b'[ 56%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/topic_health__type_support.cpp.o\n'}
+[9.776187] (team4s_interfaces) StdoutLine: {'line': b'[ 57%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/perception_snapshot__type_support.cpp.o\n'}
+[9.783975] (team4s_interfaces) StdoutLine: {'line': b'[ 58%] Linking CXX shared library libteam4s_interfaces__rosidl_typesupport_cpp.so\n'}
+[9.821097] (team4s_interfaces) StdoutLine: {'line': b'[ 59%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/team4s_interfaces/msg/task_state__type_support.cpp.o\n'}
+[9.822369] (-) TimerEvent: {}
+[9.892339] (team4s_interfaces) StdoutLine: {'line': b'[ 60%] Linking CXX shared library libteam4s_interfaces__rosidl_typesupport_c.so\n'}
+[9.912252] (team4s_interfaces) StdoutLine: {'line': b'[ 60%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/source_header__type_support.c.o\n'}
+[9.922516] (-) TimerEvent: {}
+[9.925955] (team4s_interfaces) StdoutLine: {'line': b'[ 61%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/lane_observation__type_support.c.o\n'}
+[9.926433] (team4s_interfaces) StdoutLine: {'line': b'[ 62%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/range_reading__type_support.c.o\n'}
+[9.927882] (team4s_interfaces) StdoutLine: {'line': b'[ 63%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/obstacle_observation__type_support.c.o\n'}
+[9.928973] (team4s_interfaces) StdoutLine: {'line': b'[ 64%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/lane_candidate__type_support.c.o\n'}
+[9.929441] (team4s_interfaces) StdoutLine: {'line': b'[ 65%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/cone_detection__type_support.c.o\n'}
+[9.932296] (team4s_interfaces) StdoutLine: {'line': b'[ 66%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/scene_observation__type_support.c.o\n'}
+[9.932577] (team4s_interfaces) StdoutLine: {'line': b'[ 67%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/perception_snapshot__type_support.c.o\n'}
+[9.935087] (team4s_interfaces) StdoutLine: {'line': b'[ 68%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/topic_health__type_support.c.o\n'}
+[9.980274] (team4s_interfaces) StdoutLine: {'line': b'[ 68%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/source_header__type_support_c.cpp.o\n'}
+[10.012212] (team4s_interfaces) StdoutLine: {'line': b'[ 70%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/team4s_interfaces/msg/detail/task_state__type_support.c.o\n'}
+[10.012837] (team4s_interfaces) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/lane_candidate__type_support_c.cpp.o\n'}
+[10.014784] (team4s_interfaces) StdoutLine: {'line': b'[ 72%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/cone_detection__type_support_c.cpp.o\n'}
+[10.015057] (team4s_interfaces) StdoutLine: {'line': b'[ 72%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/lane_observation__type_support_c.cpp.o\n'}
+[10.015178] (team4s_interfaces) StdoutLine: {'line': b'[ 73%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/obstacle_observation__type_support_c.cpp.o\n'}
+[10.017239] (team4s_interfaces) StdoutLine: {'line': b'[ 74%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/range_reading__type_support_c.cpp.o\n'}
+[10.018382] (team4s_interfaces) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/scene_observation__type_support_c.cpp.o\n'}
+[10.022009] (team4s_interfaces) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/topic_health__type_support_c.cpp.o\n'}
+[10.022653] (-) TimerEvent: {}
+[10.028260] (team4s_interfaces) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/perception_snapshot__type_support_c.cpp.o\n'}
+[10.028923] (team4s_interfaces) StdoutLine: {'line': b'[ 78%] Building CXX object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/team4s_interfaces/msg/detail/task_state__type_support_c.cpp.o\n'}
+[10.092555] (team4s_interfaces) StdoutLine: {'line': b'[ 79%] Linking C shared library libteam4s_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[10.122837] (-) TimerEvent: {}
+[10.155173] (team4s_interfaces) StdoutLine: {'line': b'[ 79%] Built target team4s_interfaces__rosidl_typesupport_cpp\n'}
+[10.161759] (team4s_interfaces) StdoutLine: {'line': b'[ 80%] Linking CXX shared library libteam4s_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[10.223019] (-) TimerEvent: {}
+[10.225642] (team4s_interfaces) StdoutLine: {'line': b'[ 80%] Built target team4s_interfaces__rosidl_typesupport_c\n'}
+[10.323191] (-) TimerEvent: {}
+[10.385396] (team4s_interfaces) StdoutLine: {'line': b'[ 80%] Built target team4s_interfaces__rosidl_typesupport_introspection_c\n'}
+[10.423309] (-) TimerEvent: {}
+[10.498075] (team4s_interfaces) StdoutLine: {'line': b'[ 81%] Linking CXX shared library libteam4s_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.521015] (team4s_interfaces) StdoutLine: {'line': b'[ 81%] Built target team4s_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[10.523426] (-) TimerEvent: {}
+[10.623564] (-) TimerEvent: {}
+[10.643951] (team4s_interfaces) StdoutLine: {'line': b'[ 82%] Linking CXX shared library libteam4s_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[10.723655] (-) TimerEvent: {}
+[10.816246] (team4s_interfaces) StdoutLine: {'line': b'[ 82%] Built target team4s_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[10.823759] (-) TimerEvent: {}
+[10.923965] (-) TimerEvent: {}
+[10.947051] (team4s_interfaces) StdoutLine: {'line': b'[ 82%] Built target team4s_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[10.977674] (team4s_interfaces) StdoutLine: {'line': b'[ 82%] Built target team4s_interfaces\n'}
+[11.010017] (team4s_interfaces) StdoutLine: {'line': b'[ 83%] Generating Python code for ROS interfaces\n'}
+[11.024072] (-) TimerEvent: {}
+[11.124304] (-) TimerEvent: {}
+[11.224518] (-) TimerEvent: {}
+[11.324724] (-) TimerEvent: {}
+[11.424927] (-) TimerEvent: {}
+[11.525154] (-) TimerEvent: {}
+[11.625306] (-) TimerEvent: {}
+[11.725542] (-) TimerEvent: {}
+[11.825719] (-) TimerEvent: {}
+[11.925930] (-) TimerEvent: {}
+[12.026142] (-) TimerEvent: {}
+[12.126392] (-) TimerEvent: {}
+[12.226630] (-) TimerEvent: {}
+[12.326810] (-) TimerEvent: {}
+[12.427024] (-) TimerEvent: {}
+[12.527200] (-) TimerEvent: {}
+[12.627450] (-) TimerEvent: {}
+[12.727678] (-) TimerEvent: {}
+[12.827857] (-) TimerEvent: {}
+[12.928134] (-) TimerEvent: {}
+[13.028392] (-) TimerEvent: {}
+[13.128626] (-) TimerEvent: {}
+[13.228806] (-) TimerEvent: {}
+[13.328993] (-) TimerEvent: {}
+[13.429278] (-) TimerEvent: {}
+[13.454129] (team4s_interfaces) StdoutLine: {'line': b'[ 83%] Built target team4s_interfaces__py\n'}
+[13.486259] (team4s_interfaces) StdoutLine: {'line': b'[ 84%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_source_header_s.c.o\n'}
+[13.486813] (team4s_interfaces) StdoutLine: {'line': b'[ 85%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_lane_candidate_s.c.o\n'}
+[13.486931] (team4s_interfaces) StdoutLine: {'line': b'[ 86%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_lane_observation_s.c.o\n'}
+[13.487387] (team4s_interfaces) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_range_reading_s.c.o\n'}
+[13.487958] (team4s_interfaces) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_obstacle_observation_s.c.o\n'}
+[13.489321] (team4s_interfaces) StdoutLine: {'line': b'[ 89%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_cone_detection_s.c.o\n'}
+[13.489851] (team4s_interfaces) StdoutLine: {'line': b'[ 90%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_scene_observation_s.c.o\n'}
+[13.489982] (team4s_interfaces) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_topic_health_s.c.o\n'}
+[13.490627] (team4s_interfaces) StdoutLine: {'line': b'[ 92%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_task_state_s.c.o\n'}
+[13.491163] (team4s_interfaces) StdoutLine: {'line': b'[ 93%] Building C object CMakeFiles/team4s_interfaces__rosidl_generator_py.dir/rosidl_generator_py/team4s_interfaces/msg/_perception_snapshot_s.c.o\n'}
+[13.529440] (-) TimerEvent: {}
+[13.629697] (-) TimerEvent: {}
+[13.729947] (-) TimerEvent: {}
+[13.778490] (team4s_interfaces) StdoutLine: {'line': b'[ 94%] Linking C shared library rosidl_generator_py/team4s_interfaces/libteam4s_interfaces__rosidl_generator_py.so\n'}
+[13.830079] (-) TimerEvent: {}
+[13.930315] (-) TimerEvent: {}
+[14.030512] (-) TimerEvent: {}
+[14.056316] (team4s_interfaces) StdoutLine: {'line': b'[ 94%] Built target team4s_interfaces__rosidl_generator_py\n'}
+[14.087696] (team4s_interfaces) StdoutLine: {'line': b'[ 95%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[14.088341] (team4s_interfaces) StdoutLine: {'line': b'[ 96%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_c.c.o\n'}
+[14.088460] (team4s_interfaces) StdoutLine: {'line': b'[ 97%] Building C object CMakeFiles/team4s_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[14.130600] (-) TimerEvent: {}
+[14.230840] (-) TimerEvent: {}
+[14.268270] (team4s_interfaces) StdoutLine: {'line': b'[ 99%] Linking C shared library rosidl_generator_py/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.268492] (team4s_interfaces) StdoutLine: {'line': b'[ 99%] Linking C shared library rosidl_generator_py/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.271362] (team4s_interfaces) StdoutLine: {'line': b'[100%] Linking C shared library rosidl_generator_py/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.330987] (-) TimerEvent: {}
+[14.431223] (-) TimerEvent: {}
+[14.457779] (team4s_interfaces) StdoutLine: {'line': b'[100%] Built target team4s_interfaces__rosidl_typesupport_c__pyext\n'}
+[14.457970] (team4s_interfaces) StdoutLine: {'line': b'[100%] Built target team4s_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[14.458987] (team4s_interfaces) StdoutLine: {'line': b'[100%] Built target team4s_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[14.478837] (team4s_interfaces) CommandEnded: {'returncode': 0}
+[14.479904] (team4s_interfaces) JobProgress: {'identifier': 'team4s_interfaces', 'progress': 'install'}
+[14.493205] (team4s_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mf-wsl/team4s/build/team4s_interfaces'], 'cwd': '/home/mf-wsl/team4s/build/team4s_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mf-wsl'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{eab36781-7a15-5893-94d4-af70496f53b5}'), ('HOME', '/home/mf-wsl'), ('OLDPWD', '/home/mf-wsl/team4s'), ('ROS_PYTHON_VERSION', '3'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mf-wsl'), ('NAME', 'localhost'), ('WSL_INTEROP', '/run/WSL/332_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'dumb'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mf-wsl/.qoder-cn/entry:/home/mf-wsl/.local/bin:/home/mf-wsl/.kimi-code/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/Program Files (x86)/VMware/VMware Workstation/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet:/mnt/d/Program Files/Git/cmd:/mnt/d/Program Files/nodejs:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/WINDOWS:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/d/Program Files/MATLAB/R2026a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/WSL/:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/snap/bin:/home/mf-wsl/.local/bin'), ('WT_SESSION', '2030b782-32e3-48db-9675-935529bef583'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GIT_TERMINAL_PROMPT', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mf-wsl/team4s/build/team4s_interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[14.507322] (team4s_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.510929] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/ament_index/resource_index/rosidl_interfaces/team4s_interfaces\n'}
+[14.511356] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.513604] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.514517] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/scene_observation.h\n'}
+[14.514849] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/perception_snapshot.h\n'}
+[14.515500] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/cone_detection.h\n'}
+[14.515806] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[14.516390] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/task_state.h\n'}
+[14.516653] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/range_reading.h\n'}
+[14.516939] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/obstacle_observation.h\n'}
+[14.517210] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/lane_observation.h\n'}
+[14.517491] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/lane_candidate.h\n'}
+[14.518073] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/topic_health.h\n'}
+[14.518391] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.518694] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__type_support.h\n'}
+[14.518987] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__functions.h\n'}
+[14.519489] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__functions.c\n'}
+[14.519917] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__functions.h\n'}
+[14.520207] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__type_support.h\n'}
+[14.520502] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__functions.h\n'}
+[14.520792] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__functions.h\n'}
+[14.521081] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__type_support.h\n'}
+[14.521369] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__functions.h\n'}
+[14.522171] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__struct.h\n'}
+[14.522480] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__type_support.h\n'}
+[14.522925] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__functions.h\n'}
+[14.523172] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__struct.h\n'}
+[14.523463] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__type_support.h\n'}
+[14.523751] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__struct.h\n'}
+[14.524517] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__functions.c\n'}
+[14.524811] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__functions.c\n'}
+[14.525569] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__functions.h\n'}
+[14.525885] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__struct.h\n'}
+[14.526278] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__struct.h\n'}
+[14.526595] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__struct.h\n'}
+[14.526895] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__struct.h\n'}
+[14.527185] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__functions.c\n'}
+[14.527437] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__functions.c\n'}
+[14.527707] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__type_support.h\n'}
+[14.528055] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__type_support.h\n'}
+[14.528341] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__struct.h\n'}
+[14.528583] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__functions.h\n'}
+[14.529233] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__struct.h\n'}
+[14.529357] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__functions.c\n'}
+[14.529439] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__type_support.h\n'}
+[14.529502] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__functions.h\n'}
+[14.529556] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__functions.h\n'}
+[14.529608] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__functions.c\n'}
+[14.529837] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__functions.c\n'}
+[14.530155] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__type_support.h\n'}
+[14.530435] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__struct.h\n'}
+[14.530692] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__functions.c\n'}
+[14.530974] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__functions.c\n'}
+[14.531257] (-) TimerEvent: {}
+[14.531331] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__type_support.h\n'}
+[14.531676] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/source_header.h\n'}
+[14.531929] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/library_path.sh\n'}
+[14.532158] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/library_path.dsv\n'}
+[14.532606] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_generator_c.so\n'}
+[14.533265] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_generator_c.so" to ""\n'}
+[14.533542] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.533827] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.534063] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[14.534351] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.534648] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h\n'}
+[14.535041] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__rosidl_typesupport_fastrtps_c.h\n'}
+[14.535438] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__rosidl_typesupport_fastrtps_c.h\n'}
+[14.535813] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__rosidl_typesupport_fastrtps_c.h\n'}
+[14.536306] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__rosidl_typesupport_fastrtps_c.h\n'}
+[14.536599] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__rosidl_typesupport_fastrtps_c.h\n'}
+[14.536988] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__rosidl_typesupport_fastrtps_c.h\n'}
+[14.537280] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__rosidl_typesupport_fastrtps_c.h\n'}
+[14.537569] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__rosidl_typesupport_fastrtps_c.h\n'}
+[14.537860] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__rosidl_typesupport_fastrtps_c.h\n'}
+[14.538494] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[14.538790] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[14.539079] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.539288] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.539682] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[14.539966] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.540459] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__type_support.c\n'}
+[14.540758] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__type_support.c\n'}
+[14.541078] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__rosidl_typesupport_introspection_c.h\n'}
+[14.541363] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__rosidl_typesupport_introspection_c.h\n'}
+[14.542251] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__type_support.c\n'}
+[14.542627] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__type_support.c\n'}
+[14.542941] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__rosidl_typesupport_introspection_c.h\n'}
+[14.543231] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_c.h\n'}
+[14.543521] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__rosidl_typesupport_introspection_c.h\n'}
+[14.543822] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__type_support.c\n'}
+[14.544166] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__type_support.c\n'}
+[14.544461] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__type_support.c\n'}
+[14.545157] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__type_support.c\n'}
+[14.545450] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__rosidl_typesupport_introspection_c.h\n'}
+[14.545742] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__type_support.c\n'}
+[14.546031] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__rosidl_typesupport_introspection_c.h\n'}
+[14.546329] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__rosidl_typesupport_introspection_c.h\n'}
+[14.546619] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__rosidl_typesupport_introspection_c.h\n'}
+[14.546965] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__type_support.c\n'}
+[14.547458] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__rosidl_typesupport_introspection_c.h\n'}
+[14.547754] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[14.548063] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[14.548202] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_c.so\n'}
+[14.548485] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[14.548776] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.549221] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.549512] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/source_header.hpp\n'}
+[14.549748] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/task_state.hpp\n'}
+[14.549978] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/lane_observation.hpp\n'}
+[14.550208] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/scene_observation.hpp\n'}
+[14.550540] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/perception_snapshot.hpp\n'}
+[14.550848] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/range_reading.hpp\n'}
+[14.551138] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/topic_health.hpp\n'}
+[14.551426] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/obstacle_observation.hpp\n'}
+[14.551715] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[14.552335] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/lane_candidate.hpp\n'}
+[14.552595] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.553027] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__traits.hpp\n'}
+[14.553276] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__traits.hpp\n'}
+[14.553604] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__builder.hpp\n'}
+[14.553921] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__traits.hpp\n'}
+[14.554316] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__builder.hpp\n'}
+[14.554995] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__builder.hpp\n'}
+[14.555301] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__type_support.hpp\n'}
+[14.555726] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__struct.hpp\n'}
+[14.556479] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__traits.hpp\n'}
+[14.556740] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__builder.hpp\n'}
+[14.557010] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__builder.hpp\n'}
+[14.557279] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__traits.hpp\n'}
+[14.557548] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__traits.hpp\n'}
+[14.557903] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__traits.hpp\n'}
+[14.558300] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__type_support.hpp\n'}
+[14.558572] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__struct.hpp\n'}
+[14.558806] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__struct.hpp\n'}
+[14.559039] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__struct.hpp\n'}
+[14.559327] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__type_support.hpp\n'}
+[14.559558] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__type_support.hpp\n'}
+[14.559804] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__struct.hpp\n'}
+[14.560199] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__builder.hpp\n'}
+[14.560435] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__traits.hpp\n'}
+[14.560717] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__struct.hpp\n'}
+[14.561004] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__type_support.hpp\n'}
+[14.561291] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__struct.hpp\n'}
+[14.561576] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__struct.hpp\n'}
+[14.561833] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__type_support.hpp\n'}
+[14.562260] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__builder.hpp\n'}
+[14.563005] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__type_support.hpp\n'}
+[14.563300] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__type_support.hpp\n'}
+[14.563544] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__type_support.hpp\n'}
+[14.563808] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__traits.hpp\n'}
+[14.564323] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__struct.hpp\n'}
+[14.564612] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__traits.hpp\n'}
+[14.564899] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__struct.hpp\n'}
+[14.565185] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__builder.hpp\n'}
+[14.565472] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__builder.hpp\n'}
+[14.565968] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__builder.hpp\n'}
+[14.566248] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__type_support.hpp\n'}
+[14.566531] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/cone_detection.hpp\n'}
+[14.566767] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.567024] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.567510] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[14.567827] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.568209] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.568506] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.568952] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.569236] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.569520] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.569791] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.570021] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.570290] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.570677] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.570914] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[14.571145] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/dds_fastrtps\n'}
+[14.571375] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[14.571607] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[14.571886] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces\n'}
+[14.572268] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg\n'}
+[14.572680] (team4s_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail\n'}
+[14.572991] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__type_support.cpp\n'}
+[14.573414] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__type_support.cpp\n'}
+[14.573697] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__type_support.cpp\n'}
+[14.573985] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__type_support.cpp\n'}
+[14.574230] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__type_support.cpp\n'}
+[14.574431] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__type_support.cpp\n'}
+[14.574851] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_observation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.575281] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.575579] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/perception_snapshot__type_support.cpp\n'}
+[14.575876] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.576137] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/lane_candidate__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.576365] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/obstacle_observation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.576945] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__type_support.cpp\n'}
+[14.577234] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.577520] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__type_support.cpp\n'}
+[14.577965] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/scene_observation__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.578253] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/topic_health__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.578544] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/source_header__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.578953] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/cone_detection__type_support.cpp\n'}
+[14.579246] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/include/team4s_interfaces/team4s_interfaces/msg/detail/range_reading__rosidl_typesupport_introspection_cpp.hpp\n'}
+[14.579531] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[14.579831] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[14.580276] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_cpp.so\n'}
+[14.581209] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[14.581441] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/pythonpath.sh\n'}
+[14.581728] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/pythonpath.dsv\n'}
+[14.581975] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces-0.2.0-py3.10.egg-info\n'}
+[14.582443] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces-0.2.0-py3.10.egg-info/top_level.txt\n'}
+[14.582544] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces-0.2.0-py3.10.egg-info/SOURCES.txt\n'}
+[14.582611] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces-0.2.0-py3.10.egg-info/PKG-INFO\n'}
+[14.582671] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces-0.2.0-py3.10.egg-info/dependency_links.txt\n'}
+[14.582727] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces\n'}
+[14.582779] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/__init__.py\n'}
+[14.582830] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[14.582881] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[14.582931] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/libteam4s_interfaces__rosidl_generator_py.so\n'}
+[14.582983] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.583033] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg\n'}
+[14.583165] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/__init__.py\n'}
+[14.583243] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_topic_health_s.c\n'}
+[14.583305] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_source_header_s.c\n'}
+[14.583361] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_cone_detection_s.c\n'}
+[14.583412] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_cone_detection.py\n'}
+[14.583463] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_range_reading_s.c\n'}
+[14.583514] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_task_state_s.c\n'}
+[14.583563] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_candidate_s.c\n'}
+[14.583613] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_obstacle_observation.py\n'}
+[14.583663] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_observation_s.c\n'}
+[14.583723] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_scene_observation_s.c\n'}
+[14.583790] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_observation.py\n'}
+[14.583861] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_perception_snapshot.py\n'}
+[14.584028] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_topic_health.py\n'}
+[14.584179] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_source_header.py\n'}
+[14.584255] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_scene_observation.py\n'}
+[14.584315] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_perception_snapshot_s.c\n'}
+[14.584369] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_range_reading.py\n'}
+[14.584435] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_obstacle_observation_s.c\n'}
+[14.584486] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_candidate.py\n'}
+[14.584537] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_task_state.py\n'}
+[14.584586] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.584637] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/_team4s_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[14.584686] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.631410] (-) TimerEvent: {}
+[14.657236] (team4s_interfaces) StdoutLine: {'line': b"Listing '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces'...\n"}
+[14.657417] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/__init__.py'...\n"}
+[14.657492] (team4s_interfaces) StdoutLine: {'line': b"Listing '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg'...\n"}
+[14.657551] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/__init__.py'...\n"}
+[14.657608] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_cone_detection.py'...\n"}
+[14.657661] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_candidate.py'...\n"}
+[14.657722] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_lane_observation.py'...\n"}
+[14.657772] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_obstacle_observation.py'...\n"}
+[14.657824] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_perception_snapshot.py'...\n"}
+[14.657874] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_range_reading.py'...\n"}
+[14.657923] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_scene_observation.py'...\n"}
+[14.657973] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_source_header.py'...\n"}
+[14.658023] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_task_state.py'...\n"}
+[14.658073] (team4s_interfaces) StdoutLine: {'line': b"Compiling '/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/msg/_topic_health.py'...\n"}
+[14.663716] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.664530] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[14.664975] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.665766] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[14.666230] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[14.667069] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages/team4s_interfaces/team4s_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[14.667708] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_generator_py.so\n'}
+[14.668399] (team4s_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/mf-wsl/team4s/install/team4s_interfaces/lib/libteam4s_interfaces__rosidl_generator_py.so" to ""\n'}
+[14.668525] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust\n'}
+[14.669021] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/src\n'}
+[14.669796] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/src/msg.rs\n'}
+[14.670169] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/src/msg\n'}
+[14.670914] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/src/msg/rmw.rs\n'}
+[14.671269] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/src/lib.rs\n'}
+[14.671536] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/build.rs\n'}
+[14.671807] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/rust/Cargo.toml\n'}
+[14.672829] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/SourceHeader.idl\n'}
+[14.673222] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/LaneCandidate.idl\n'}
+[14.673531] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/LaneObservation.idl\n'}
+[14.673900] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/RangeReading.idl\n'}
+[14.674200] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/ObstacleObservation.idl\n'}
+[14.674563] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/ConeDetection.idl\n'}
+[14.674939] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/SceneObservation.idl\n'}
+[14.675245] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/TopicHealth.idl\n'}
+[14.675548] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/PerceptionSnapshot.idl\n'}
+[14.675887] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/TaskState.idl\n'}
+[14.676300] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/SourceHeader.msg\n'}
+[14.676611] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/LaneCandidate.msg\n'}
+[14.676958] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/LaneObservation.msg\n'}
+[14.677260] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/RangeReading.msg\n'}
+[14.677635] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/ObstacleObservation.msg\n'}
+[14.677956] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/ConeDetection.msg\n'}
+[14.678317] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/SceneObservation.msg\n'}
+[14.678665] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/TopicHealth.msg\n'}
+[14.678983] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/PerceptionSnapshot.msg\n'}
+[14.679297] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/msg/TaskState.msg\n'}
+[14.680369] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/ament_index/resource_index/package_run_dependencies/team4s_interfaces\n'}
+[14.681277] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/ament_index/resource_index/parent_prefix_path/team4s_interfaces\n'}
+[14.681625] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/ament_prefix_path.sh\n'}
+[14.681942] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/ament_prefix_path.dsv\n'}
+[14.682315] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/path.sh\n'}
+[14.682641] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/environment/path.dsv\n'}
+[14.683019] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/local_setup.bash\n'}
+[14.683354] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/local_setup.sh\n'}
+[14.683663] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/local_setup.zsh\n'}
+[14.683990] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/local_setup.dsv\n'}
+[14.684572] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/package.dsv\n'}
+[14.685281] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/ament_index/resource_index/packages/team4s_interfaces\n'}
+[14.686245] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_generator_cExport.cmake\n'}
+[14.686548] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[14.687009] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[14.687324] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[14.687891] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[14.688335] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[14.688688] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[14.688992] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[14.689351] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_generator_cppExport.cmake\n'}
+[14.689692] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[14.690093] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[14.690481] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[14.690834] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[14.691158] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[14.691552] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[14.692123] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_generator_pyExport.cmake\n'}
+[14.692559] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/export_team4s_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[14.692861] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[14.693238] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[14.693581] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[14.693905] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[14.694315] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[14.694684] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[14.694991] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[14.695317] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[14.695663] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfacesConfig.cmake\n'}
+[14.696056] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/cmake/team4s_interfacesConfig-version.cmake\n'}
+[14.696626] (team4s_interfaces) StdoutLine: {'line': b'-- Installing: /home/mf-wsl/team4s/install/team4s_interfaces/share/team4s_interfaces/package.xml\n'}
+[14.699795] (team4s_interfaces) CommandEnded: {'returncode': 0}
+[14.731537] (-) TimerEvent: {}
+[14.743122] (team4s_interfaces) JobEnded: {'identifier': 'team4s_interfaces', 'rc': 0}
+[14.744413] (team4s_control) JobStarted: {'identifier': 'team4s_control'}
+[14.831701] (-) TimerEvent: {}
+[14.931955] (-) TimerEvent: {}
+[15.032205] (-) TimerEvent: {}
+[15.132399] (-) TimerEvent: {}
+[15.232642] (-) TimerEvent: {}
+[15.332820] (-) TimerEvent: {}
+[15.433070] (-) TimerEvent: {}
+[15.533244] (-) TimerEvent: {}
+[15.633460] (-) TimerEvent: {}
+[15.733653] (-) TimerEvent: {}
+[15.833838] (-) TimerEvent: {}
+[15.934030] (-) TimerEvent: {}
+[16.034228] (-) TimerEvent: {}
+[16.134411] (-) TimerEvent: {}
+[16.232861] (team4s_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/team4s_control', 'build', '--build-base', '/home/mf-wsl/team4s/build/team4s_control/build', 'install', '--record', '/home/mf-wsl/team4s/build/team4s_control/install.log', '--install-scripts', '$base/lib/team4s_control', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mf-wsl/team4s/src/team4s_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mf-wsl'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mf-wsl/team4s/install/team4s_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{eab36781-7a15-5893-94d4-af70496f53b5}'), ('HOME', '/home/mf-wsl'), ('OLDPWD', '/home/mf-wsl/team4s'), ('ROS_PYTHON_VERSION', '3'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mf-wsl'), ('NAME', 'localhost'), ('WSL_INTEROP', '/run/WSL/332_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'dumb'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mf-wsl/.qoder-cn/entry:/home/mf-wsl/.local/bin:/home/mf-wsl/.kimi-code/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/Program Files (x86)/VMware/VMware Workstation/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet:/mnt/d/Program Files/Git/cmd:/mnt/d/Program Files/nodejs:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/WINDOWS:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/d/Program Files/MATLAB/R2026a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/WSL/:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/snap/bin:/home/mf-wsl/.local/bin'), ('WT_SESSION', '2030b782-32e3-48db-9675-935529bef583'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/mf-wsl/team4s/install/team4s_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GIT_TERMINAL_PROMPT', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mf-wsl/team4s/build/team4s_control'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mf-wsl/team4s/build/team4s_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages:/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/home/mf-wsl/team4s/install/team4s_interfaces')]), 'shell': False}
+[16.235466] (-) TimerEvent: {}
+[16.335605] (-) TimerEvent: {}
+[16.435809] (-) TimerEvent: {}
+[16.536006] (-) TimerEvent: {}
+[16.550324] (team4s_control) StdoutLine: {'line': b'running egg_info\n'}
+[16.551192] (team4s_control) StdoutLine: {'line': b'creating ../../build/team4s_control/team4s_control.egg-info\n'}
+[16.552080] (team4s_control) StdoutLine: {'line': b'writing ../../build/team4s_control/team4s_control.egg-info/PKG-INFO\n'}
+[16.552583] (team4s_control) StdoutLine: {'line': b'writing dependency_links to ../../build/team4s_control/team4s_control.egg-info/dependency_links.txt\n'}
+[16.553286] (team4s_control) StdoutLine: {'line': b'writing entry points to ../../build/team4s_control/team4s_control.egg-info/entry_points.txt\n'}
+[16.553475] (team4s_control) StdoutLine: {'line': b'writing requirements to ../../build/team4s_control/team4s_control.egg-info/requires.txt\n'}
+[16.553559] (team4s_control) StdoutLine: {'line': b'writing top-level names to ../../build/team4s_control/team4s_control.egg-info/top_level.txt\n'}
+[16.553626] (team4s_control) StdoutLine: {'line': b"writing manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'\n"}
+[16.555486] (team4s_control) StdoutLine: {'line': b"reading manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'\n"}
+[16.555736] (team4s_control) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[16.556910] (team4s_control) StdoutLine: {'line': b"writing manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'\n"}
+[16.557037] (team4s_control) StdoutLine: {'line': b'running build\n'}
+[16.557275] (team4s_control) StdoutLine: {'line': b'running build_py\n'}
+[16.557652] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/build/team4s_control/build\n'}
+[16.558227] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/build/team4s_control/build/lib\n'}
+[16.558627] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.559336] (team4s_control) StdoutLine: {'line': b'copying team4s_control/contract.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.559618] (team4s_control) StdoutLine: {'line': b'copying team4s_control/__init__.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.559937] (team4s_control) StdoutLine: {'line': b'copying team4s_control/task_state_bridge.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.560520] (team4s_control) StdoutLine: {'line': b'copying team4s_control/chassis_sink.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.561016] (team4s_control) StdoutLine: {'line': b'copying team4s_control/m1_node_v2.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.561691] (team4s_control) StdoutLine: {'line': b'copying team4s_control/m1_node.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.561802] (team4s_control) StdoutLine: {'line': b'copying team4s_control/adapter_v2.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control\n'}
+[16.561875] (team4s_control) StdoutLine: {'line': b'running install\n'}
+[16.561935] (team4s_control) StdoutLine: {'line': b'running install_lib\n'}
+[16.562430] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.563120] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/contract.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.563490] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/__init__.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.563796] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/task_state_bridge.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.564420] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/chassis_sink.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.564718] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/m1_node_v2.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.564950] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/m1_node.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.565474] (team4s_control) StdoutLine: {'line': b'copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/adapter_v2.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control\n'}
+[16.565577] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/contract.py to contract.cpython-310.pyc\n'}
+[16.568166] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/__init__.py to __init__.cpython-310.pyc\n'}
+[16.568573] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/task_state_bridge.py to task_state_bridge.cpython-310.pyc\n'}
+[16.571272] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/chassis_sink.py to chassis_sink.cpython-310.pyc\n'}
+[16.572227] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/m1_node_v2.py to m1_node_v2.cpython-310.pyc\n'}
+[16.575606] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/m1_node.py to m1_node.cpython-310.pyc\n'}
+[16.576840] (team4s_control) StdoutLine: {'line': b'byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/adapter_v2.py to adapter_v2.cpython-310.pyc\n'}
+[16.584451] (team4s_control) StdoutLine: {'line': b'running install_data\n'}
+[16.584578] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index\n'}
+[16.584892] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index\n'}
+[16.585592] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index/packages\n'}
+[16.586425] (team4s_control) StdoutLine: {'line': b'copying resource/team4s_control -> /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index/packages\n'}
+[16.586783] (team4s_control) StdoutLine: {'line': b'copying package.xml -> /home/mf-wsl/team4s/install/team4s_control/share/team4s_control\n'}
+[16.587277] (team4s_control) StdoutLine: {'line': b'creating /home/mf-wsl/team4s/install/team4s_control/share/team4s_control/launch\n'}
+[16.587606] (team4s_control) StdoutLine: {'line': b'copying launch/m1.launch.py -> /home/mf-wsl/team4s/install/team4s_control/share/team4s_control/launch\n'}
+[16.587924] (team4s_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[16.590189] (team4s_control) StdoutLine: {'line': b'Copying ../../build/team4s_control/team4s_control.egg-info to /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control-0.0.0-py3.10.egg-info\n'}
+[16.592192] (team4s_control) StdoutLine: {'line': b'running install_scripts\n'}
+[16.618593] (team4s_control) StdoutLine: {'line': b'Installing m1_node script to /home/mf-wsl/team4s/install/team4s_control/lib/team4s_control\n'}
+[16.619774] (team4s_control) StdoutLine: {'line': b"writing list of installed files to '/home/mf-wsl/team4s/build/team4s_control/install.log'\n"}
+[16.636199] (-) TimerEvent: {}
+[16.646185] (team4s_control) CommandEnded: {'returncode': 0}
+[16.656495] (team4s_control) JobEnded: {'identifier': 'team4s_control', 'rc': 0}
+[16.658063] (-) EventReactorShutdown: {}

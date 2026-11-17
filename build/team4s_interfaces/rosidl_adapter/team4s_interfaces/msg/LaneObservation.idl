@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from team4s_interfaces/msg/LaneObservation.msg
+// generated code does not contain a copyright notice
+
+#include "team4s_interfaces/msg/LaneCandidate.idl"
+#include "team4s_interfaces/msg/SourceHeader.idl"
+
+module team4s_interfaces {
+  module msg {
+    struct LaneObservation {
+      team4s_interfaces::msg::SourceHeader meta;
+
+      uint32 image_width;
+
+      uint32 image_height;
+
+      sequence<team4s_interfaces::msg::LaneCandidate> candidates;
+
+      @verbatim (language="comment", text=
+        "Metric summary belongs to exactly one candidate selected by task context.")
+      string selected_candidate_id;
+
+      boolean offset_m_valid;
+
+      @verbatim (language="comment", text=
+        "Positive right, at the projected reference point; NOT axle lateral error.")
+      float offset_m;
+
+      string metric_reason;
+
+      string calibration_id;
+
+      string metric_frame_id;
+
+      float metric_reference_x_m;
+
+      float metric_reference_y_m;
+    };
+  };
+};

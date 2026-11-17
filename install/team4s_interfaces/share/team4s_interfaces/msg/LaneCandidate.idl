@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from team4s_interfaces/msg/LaneCandidate.msg
+// generated code does not contain a copyright notice
+
+
+module team4s_interfaces {
+  module msg {
+    module LaneCandidate_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 FIRST = 1;
+      const uint8 SECOND = 2;
+    };
+    struct LaneCandidate {
+      string candidate_id;
+
+      uint8 route_lane;
+
+      boolean is_branch;
+
+      boolean left_visible;
+
+      boolean right_visible;
+
+      boolean center_valid;
+
+      @verbatim (language="comment", text=
+        "lane center x - image center x, original input image pixels, positive right")
+      float offset_px;
+
+      int32 reference_y_px;
+
+      @verbatim (language="comment", text=
+        "Positive heading means path points right of image-up. Not a steering angle.")
+      boolean heading_valid;
+
+      float heading_rad;
+    };
+  };
+};

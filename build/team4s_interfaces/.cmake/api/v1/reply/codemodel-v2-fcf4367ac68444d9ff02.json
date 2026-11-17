@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-655a47668e1a113c3055.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "team4s_interfaces__py",
+					"jsonFile" : "directory-team4s_interfaces__py-7eb0e0b50fa315c1cee3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/mf-wsl/team4s/build/team4s_interfaces/team4s_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "team4s_interfaces__rs",
+					"jsonFile" : "directory-team4s_interfaces__rs-a6c4c613f31135b079a1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/mf-wsl/team4s/build/team4s_interfaces/team4s_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "team4s_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_team4s_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_team4s_interfaces_egg-f2961cb675ab30a64389.json",
+					"name" : "ament_cmake_python_build_team4s_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_team4s_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_team4s_interfaces-c60231bdb8b997f6abe3.json",
+					"name" : "ament_cmake_python_copy_team4s_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces-da2cbee315fa4d5e427e.json",
+					"name" : "team4s_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__cpp-be7f7ce4f3f716b093e2.json",
+					"name" : "team4s_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "team4s_interfaces__py::@7f96201f8f825638405f",
+					"jsonFile" : "target-team4s_interfaces__py-5935aa33a1fe944ff9d0.json",
+					"name" : "team4s_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_generator_c-6439ad04304e2ab63d10.json",
+					"name" : "team4s_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_generator_py-b85dd275d034a8e19596.json",
+					"name" : "team4s_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_c-e701738778b6e6eddafb.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_c__pyext-4bc0663a1a430bba5530.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_cpp-53797002c76fb899d86c.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_fastrtps_c-77a7d65a42996516a280.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_fastrtps_c__pyext-1996bc98ec661189e063.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_fastrtps_cpp-511c95ed4254e0f89cc6.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_introspection_c-8e2213349d001d8f07d5.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_introspection_c__pyext-a5786068a854d50c1486.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces__rosidl_typesupport_introspection_cpp-10a0421b60cbc890bfe5.json",
+					"name" : "team4s_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "team4s_interfaces__rs::@7e3063889c3ca1e34f10",
+					"jsonFile" : "target-team4s_interfaces__rs-0fe2468d1e57fa89a4ad.json",
+					"name" : "team4s_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "team4s_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-team4s_interfaces_uninstall-f5e0efb98896fb19756d.json",
+					"name" : "team4s_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-47b54b686f97d90488c5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mf-wsl/team4s/build/team4s_interfaces",
+		"source" : "/home/mf-wsl/team4s/src/team4s_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

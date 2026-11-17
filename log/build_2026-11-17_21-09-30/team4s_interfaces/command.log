@@ -1,0 +1,6 @@
+Invoking command in '/home/mf-wsl/team4s/build/team4s_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/mf-wsl/team4s/src/team4s_interfaces -DCMAKE_INSTALL_PREFIX=/home/mf-wsl/team4s/install/team4s_interfaces
+Invoked command in '/home/mf-wsl/team4s/build/team4s_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/mf-wsl/team4s/src/team4s_interfaces -DCMAKE_INSTALL_PREFIX=/home/mf-wsl/team4s/install/team4s_interfaces
+Invoking command in '/home/mf-wsl/team4s/build/team4s_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mf-wsl/team4s/build/team4s_interfaces -- -j32 -l32
+Invoked command in '/home/mf-wsl/team4s/build/team4s_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mf-wsl/team4s/build/team4s_interfaces -- -j32 -l32
+Invoking command in '/home/mf-wsl/team4s/build/team4s_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mf-wsl/team4s/build/team4s_interfaces
+Invoked command in '/home/mf-wsl/team4s/build/team4s_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mf-wsl/team4s/build/team4s_interfaces

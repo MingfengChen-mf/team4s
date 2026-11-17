@@ -1,0 +1,606 @@
+[0.000000] (-) TimerEvent: {}
+[0.000096] (team4s_control) JobQueued: {'identifier': 'team4s_control', 'dependencies': OrderedDict([('team4s_interfaces', '/home/mf-wsl/team4s/install/team4s_interfaces'), ('team4s_control', '/home/mf-wsl/team4s/install/team4s_control')])}
+[0.001458] (team4s_control) JobStarted: {'identifier': 'team4s_control'}
+[0.099422] (-) TimerEvent: {}
+[0.199681] (-) TimerEvent: {}
+[0.299942] (-) TimerEvent: {}
+[0.400156] (-) TimerEvent: {}
+[0.500362] (-) TimerEvent: {}
+[0.600579] (-) TimerEvent: {}
+[0.700761] (-) TimerEvent: {}
+[0.744020] (team4s_control) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/mf-wsl/team4s/src/team4s_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mf-wsl'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mf-wsl/team4s/install/team4s_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{eab36781-7a15-5893-94d4-af70496f53b5}'), ('HOME', '/home/mf-wsl'), ('OLDPWD', '/home/mf-wsl/team4s'), ('ROS_PYTHON_VERSION', '3'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mf-wsl'), ('NAME', 'localhost'), ('WSL_INTEROP', '/run/WSL/332_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'dumb'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mf-wsl/.qoder-cn/entry:/home/mf-wsl/.local/bin:/home/mf-wsl/.kimi-code/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/Program Files (x86)/VMware/VMware Workstation/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet:/mnt/d/Program Files/Git/cmd:/mnt/d/Program Files/nodejs:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/WINDOWS:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/d/Program Files/MATLAB/R2026a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/WSL/:/mnt/c/Users/16605/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/d/msys64/mingw64/bin:/mnt/c/Users/16605/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/16605/AppData/Roaming/npm:/mnt/c/Users/16605/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/snap/bin:/home/mf-wsl/.local/bin'), ('WT_SESSION', '2030b782-32e3-48db-9675-935529bef583'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/mf-wsl/team4s/install/team4s_control:/home/mf-wsl/team4s/install/team4s_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GIT_TERMINAL_PROMPT', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/mf-wsl/team4s/build/team4s_control'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages:/home/mf-wsl/team4s/install/team4s_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/home/mf-wsl/team4s/install/team4s_interfaces'), ('PYTHONDONTWRITEBYTECODE', '1'), ('PYTEST_ADDOPTS', '--tb=short --junit-xml=/home/mf-wsl/team4s/build/team4s_control/pytest.xml --junit-prefix=team4s_control -o cache_dir=/home/mf-wsl/team4s/build/team4s_control/.pytest_cache')]), 'shell': False}
+[0.800858] (-) TimerEvent: {}
+[0.901033] (-) TimerEvent: {}
+[1.001250] (-) TimerEvent: {}
+[1.101448] (-) TimerEvent: {}
+[1.201640] (-) TimerEvent: {}
+[1.301828] (-) TimerEvent: {}
+[1.402024] (-) TimerEvent: {}
+[1.421883] (team4s_control) StdoutLine: {'line': b'============================= test session starts ==============================\n'}
+[1.422283] (team4s_control) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[1.422568] (team4s_control) StdoutLine: {'line': b'cachedir: /home/mf-wsl/team4s/build/team4s_control/.pytest_cache\n'}
+[1.422970] (team4s_control) StdoutLine: {'line': b'rootdir: /home/mf-wsl/team4s/src/team4s_control\n'}
+[1.423167] (team4s_control) StdoutLine: {'line': b'plugins: ament-lint-0.12.15, ament-flake8-0.12.15, launch-testing-1.0.15, ament-copyright-0.12.15, launch-testing-ros-0.19.14, ament-xmllint-0.12.15, ament-pep257-0.12.15, cov-3.0.0, colcon-core-0.21.3\n'}
+[1.423464] (team4s_control) StdoutLine: {'line': b'collected 3 items\n'}
+[1.423666] (team4s_control) StdoutLine: {'line': b'\n'}
+[1.428855] (team4s_control) StdoutLine: {'line': b'test/test_copyright.py s                                                 [ 33%]\n'}
+[1.502200] (-) TimerEvent: {}
+[1.602483] (-) TimerEvent: {}
+[1.702715] (-) TimerEvent: {}
+[1.802937] (-) TimerEvent: {}
+[1.903200] (-) TimerEvent: {}
+[1.923557] (team4s_control) StdoutLine: {'line': b'test/test_flake8.py F                                                    [ 66%]\n'}
+[2.003287] (-) TimerEvent: {}
+[2.103467] (-) TimerEvent: {}
+[2.187048] (team4s_control) StdoutLine: {'line': b'test/test_pep257.py F                                                    [100%]\n'}
+[2.187243] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.187320] (team4s_control) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[2.187387] (team4s_control) StdoutLine: {'line': b'_________________________________ test_flake8 __________________________________\n'}
+[2.187447] (team4s_control) StdoutLine: {'line': b'test/test_flake8.py:23: in test_flake8\n'}
+[2.187501] (team4s_control) StdoutLine: {'line': b'    assert rc == 0, \\\n'}
+[2.187553] (team4s_control) StdoutLine: {'line': b'E   AssertionError: Found 57 code style errors / warnings:\n'}
+[2.187606] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:9:100: E501 line too long (101 > 99 characters)\n'}
+[2.187670] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:76:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.187722] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:76:24: E116 unexpected indentation (comment)\n'}
+[2.187774] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:84:7: E221 multiple spaces before operator\n'}
+[2.187827] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:85:8: E221 multiple spaces before operator\n'}
+[2.187879] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:87:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.187937] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:87:24: E116 unexpected indentation (comment)\n'}
+[2.187987] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:88:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188037] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:88:24: E116 unexpected indentation (comment)\n'}
+[2.188087] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:162:37: E116 unexpected indentation (comment)\n'}
+[2.188138] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:163:37: E116 unexpected indentation (comment)\n'}
+[2.188189] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:164:37: E116 unexpected indentation (comment)\n'}
+[2.188239] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:178:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188291] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:178:39: E116 unexpected indentation (comment)\n'}
+[2.188342] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:179:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188393] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:179:39: E116 unexpected indentation (comment)\n'}
+[2.188443] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:180:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188493] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:180:39: E116 unexpected indentation (comment)\n'}
+[2.188543] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:182:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188715] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:182:39: E116 unexpected indentation (comment)\n'}
+[2.188853] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:190:40: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.188935] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:190:40: E116 unexpected indentation (comment)\n'}
+[2.189041] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:192:37: E116 unexpected indentation (comment)\n'}
+[2.189138] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:193:37: E116 unexpected indentation (comment)\n'}
+[2.189219] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:195:37: E116 unexpected indentation (comment)\n'}
+[2.189281] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:197:40: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.189335] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:197:40: E116 unexpected indentation (comment)\n'}
+[2.189387] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:207:45: E116 unexpected indentation (comment)\n'}
+[2.189439] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:214:37: E116 unexpected indentation (comment)\n'}
+[2.189490] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:217:37: E116 unexpected indentation (comment)\n'}
+[2.189541] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:223:36: E261 at least two spaces before inline comment\n'}
+[2.189631] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:224:36: E261 at least two spaces before inline comment\n'}
+[2.189755] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:276:1: E302 expected 2 blank lines, found 1\n'}
+[2.189825] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:300:1: E302 expected 2 blank lines, found 1\n'}
+[2.189885] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:305:1: E302 expected 2 blank lines, found 1\n'}
+[2.190071] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:309:1: E302 expected 2 blank lines, found 1\n'}
+[2.190154] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/contract.py:321:1: E302 expected 2 blank lines, found 1\n'}
+[2.190233] (team4s_control) StdoutLine: {'line': b"E     ./team4s_control/m1_node_v2.py:67:1: F401 'contract.V_CRUISE' imported but unused\n"}
+[2.190289] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node_v2.py:67:1: E402 module level import not at top of file\n'}
+[2.190350] (team4s_control) StdoutLine: {'line': b"E     ./team4s_control/m1_node_v2.py:74:1: F401 'adapter_v2.g' imported but unused\n"}
+[2.190438] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node_v2.py:74:1: E402 module level import not at top of file\n'}
+[2.190492] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node_v2.py:75:1: E402 module level import not at top of file\n'}
+[2.190544] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node_v2.py:136:100: E501 line too long (100 > 99 characters)\n'}
+[2.190596] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node_v2.py:527:32: E128 continuation line under-indented for visual indent\n'}
+[2.190648] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:40:1: E402 module level import not at top of file\n'}
+[2.190700] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:41:1: E402 module level import not at top of file\n'}
+[2.190752] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:42:1: E402 module level import not at top of file\n'}
+[2.190803] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:43:1: E402 module level import not at top of file\n'}
+[2.190911] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:44:1: E402 module level import not at top of file\n'}
+[2.190991] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:46:1: E402 module level import not at top of file\n'}
+[2.191054] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:47:1: E402 module level import not at top of file\n'}
+[2.191111] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:48:1: E402 module level import not at top of file\n'}
+[2.191163] (team4s_control) StdoutLine: {'line': b"E     ./team4s_control/m1_node.py:49:1: F401 'chassis_sink.ChassisSink' imported but unused\n"}
+[2.191215] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/m1_node.py:49:1: E402 module level import not at top of file\n'}
+[2.191269] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/adapter_v2.py:63:1: E402 module level import not at top of file\n'}
+[2.191321] (team4s_control) StdoutLine: {'line': b'E     ./team4s_control/adapter_v2.py:493:100: E501 line too long (108 > 99 characters)\n'}
+[2.191371] (team4s_control) StdoutLine: {'line': b"E     ./team4s_control/adapter_v2.py:711:9: F841 local variable 'hstate' is assigned to but never used\n"}
+[2.191424] (team4s_control) StdoutLine: {'line': b'E   assert 1 == 0\n'}
+[2.191474] (team4s_control) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[2.191525] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.191575] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:9:100: E501 line too long (101 > 99 characters)\n'}
+[2.191634] (team4s_control) StdoutLine: {'line': b'from __future__ import annotations   # Py3.8 \xe5\x85\xbc\xe5\xae\xb9\xef\xbc\x9afloat | None / dict[str, ...] \xe7\xad\x89\xe4\xbb\x85\xe4\xbd\x9c\xe5\xad\x97\xe7\xac\xa6\xe4\xb8\xb2\xe6\xb3\xa8\xe8\xa7\xa3\xef\xbc\x88Foxy \xe5\xae\xb9\xe5\x99\xa8 Py3.8\xef\xbc\x89\n'}
+[2.191688] (team4s_control) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[2.191741] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.191864] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:76:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.191933] (team4s_control) StdoutLine: {'line': b'                       # \xe5\x9b\xa0\xe4\xb8\xba\xe9\x9a\x9c\xe7\xa2\x8d\xe8\xb7\x9d\xe7\xa6\xbb\xe6\x9d\xa5\xe8\x87\xaa RangeReading.distance_m \xe7\x9a\x84\xe7\x9c\x9f\xe5\xae\x9e\xe7\xb1\xb3\xe5\x80\xbc\xef\xbc\x8c\xe4\xb8\x8d\xe6\x98\xaf\xe6\x8e\xa8\xe7\xae\x97\n'}
+[2.191992] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.192047] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.192100] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:76:24: E116 unexpected indentation (comment)\n'}
+[2.192152] (team4s_control) StdoutLine: {'line': b'                       # \xe5\x9b\xa0\xe4\xb8\xba\xe9\x9a\x9c\xe7\xa2\x8d\xe8\xb7\x9d\xe7\xa6\xbb\xe6\x9d\xa5\xe8\x87\xaa RangeReading.distance_m \xe7\x9a\x84\xe7\x9c\x9f\xe5\xae\x9e\xe7\xb1\xb3\xe5\x80\xbc\xef\xbc\x8c\xe4\xb8\x8d\xe6\x98\xaf\xe6\x8e\xa8\xe7\xae\x97\n'}
+[2.192212] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.192264] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.192315] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:84:7: E221 multiple spaces before operator\n'}
+[2.192397] (team4s_control) StdoutLine: {'line': b'V_SLOW   = 0.25        # \xe5\x87\x8f\xe9\x80\x9f\xe7\x9b\xae\xe6\xa0\x87\xef\xbc\x8c\xe7\xba\xa6\xe5\xb7\xa1\xe8\x88\xaa\xe7\x9a\x84 65%\xef\xbc\x88\xe9\x99\x8d\xe5\xb9\x85 35%\xef\xbc\x9bHANDOFF \xc2\xa710 T2 \xe9\xaa\x8c\xe6\x94\xb6\xe8\xa6\x81\xe6\xb1\x82\xe9\x99\x8d\xe5\xb9\x85\xe2\x89\xa530%\xef\xbc\x89\n'}
+[2.192460] (team4s_control) StdoutLine: {'line': b'      ^\n'}
+[2.192511] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.192562] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:85:8: E221 multiple spaces before operator\n'}
+[2.192613] (team4s_control) StdoutLine: {'line': b'V_AVOID  = 0.29        # \xe9\x81\xbf\xe9\x9a\x9c\xef\xbc\x8c\xe7\xbb\xb4\xe6\x8c\x81\xe5\x8e\x9f\xe6\xaf\x94\xe4\xbe\x8b\xe7\xba\xa6\xe5\xb7\xa1\xe8\x88\xaa\xe7\x9a\x84 76%\xef\xbc\x88\xe6\x97\xa7 0.25/0.33\xef\xbc\x89\n'}
+[2.192696] (team4s_control) StdoutLine: {'line': b'       ^\n'}
+[2.192791] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.192856] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:87:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.192920] (team4s_control) StdoutLine: {'line': b'                       # \xe6\x97\xa7\xe5\x80\xbc 0.19 \xe6\x8c\x89\xe6\x97\xa7\xe5\x87\x8f\xe9\x80\x9f\xe5\xba\xa6 0.40m/s\xc2\xb2 \xe5\xa4\x96\xe6\x8e\xa8\xef\xbc\x8c\xe4\xbc\x9a\xe8\xae\xa9\xe8\xbd\xa6\xe6\x8f\x90\xe5\x89\x8d\xe5\x81\x9c 8~9cm\xef\xbc\x8c\n'}
+[2.193026] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.193106] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.193160] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:87:24: E116 unexpected indentation (comment)\n'}
+[2.193215] (team4s_control) StdoutLine: {'line': b'                       # \xe6\x97\xa7\xe5\x80\xbc 0.19 \xe6\x8c\x89\xe6\x97\xa7\xe5\x87\x8f\xe9\x80\x9f\xe5\xba\xa6 0.40m/s\xc2\xb2 \xe5\xa4\x96\xe6\x8e\xa8\xef\xbc\x8c\xe4\xbc\x9a\xe8\xae\xa9\xe8\xbd\xa6\xe6\x8f\x90\xe5\x89\x8d\xe5\x81\x9c 8~9cm\xef\xbc\x8c\n'}
+[2.193270] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.193322] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.193375] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:88:24: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.193435] (team4s_control) StdoutLine: {'line': b'                       # \xe8\xbf\x87\xe4\xb8\x8d\xe4\xba\x86 \xc2\xb15cm \xe2\x80\x94\xe2\x80\x94 HANDOFF \xc2\xa70 \xe7\xbb\x93\xe8\xae\xba\xe4\xba\x8c\xe3\x80\x82\xe5\xae\x9e\xe6\xb5\x8b\xe5\x88\xb6\xe5\x8a\xa8\xe8\xb7\x9d\xe7\xa6\xbb 0.044m @duty 0.08\xef\xbc\x89\n'}
+[2.193490] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.193541] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.193648] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:88:24: E116 unexpected indentation (comment)\n'}
+[2.193736] (team4s_control) StdoutLine: {'line': b'                       # \xe8\xbf\x87\xe4\xb8\x8d\xe4\xba\x86 \xc2\xb15cm \xe2\x80\x94\xe2\x80\x94 HANDOFF \xc2\xa70 \xe7\xbb\x93\xe8\xae\xba\xe4\xba\x8c\xe3\x80\x82\xe5\xae\x9e\xe6\xb5\x8b\xe5\x88\xb6\xe5\x8a\xa8\xe8\xb7\x9d\xe7\xa6\xbb 0.044m @duty 0.08\xef\xbc\x89\n'}
+[2.193803] (team4s_control) StdoutLine: {'line': b'                       ^\n'}
+[2.193861] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.193920] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:162:37: E116 unexpected indentation (comment)\n'}
+[2.194079] (team4s_control) StdoutLine: {'line': b'                                    #    \xe6\x81\x92 0\xef\xbc\x8c**\xe4\xb8\x8d\xe5\x8f\xaf\xe5\xbd\x93\xe5\x89\x8d\xe9\xa6\x88\xe7\x94\xa8**\xe3\x80\x82\xe8\xa6\x81\xe7\xae\x97\xe5\xbf\x85\xe9\xa1\xbb\xe5\x85\x88\xe6\x9c\x89\xe7\xb1\xb3\xe5\x80\xbc\xef\xbc\x9a\n'}
+[2.194153] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.194211] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.194266] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:163:37: E116 unexpected indentation (comment)\n'}
+[2.194333] (team4s_control) StdoutLine: {'line': b'                                    #    \xe5\x9c\xa8\xe7\xb1\xb3\xe5\x9f\x9f\xe6\x8b\x9f\xe5\x90\x88\xe5\xa4\x9a\xe9\xa1\xb9\xe5\xbc\x8f\xe5\x8f\x96 C2\xef\xbc\x88\xe5\x8d\x95\xe4\xbd\x8d 1/m\xef\xbc\x89\xef\xbc\x8c\xe5\x83\x8f\xe7\xb4\xa0\xe5\x9f\x9f\xe7\x9a\x84\n'}
+[2.194391] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.194445] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.194532] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:164:37: E116 unexpected indentation (comment)\n'}
+[2.194633] (team4s_control) StdoutLine: {'line': b'                                    #    "\xe5\x9b\xbe\xe5\x83\x8f\xe6\x9b\xb2\xe7\x8e\x87"\xe5\xb7\xae\xe4\xb8\x80\xe4\xb8\xaa\xe9\x9a\x8f\xe8\xb7\x9d\xe7\xa6\xbb\xe5\x8f\x98\xe7\x9a\x84\xe9\x80\x8f\xe8\xa7\x86\xe5\x9b\xa0\xe5\xad\x90\xef\xbc\x8c\xe4\xb8\x8d\xe8\x83\xbd\xe6\x9b\xbf\xe4\xbb\xa3\xe3\x80\x82\n'}
+[2.194701] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.194757] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.194809] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:178:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.194861] (team4s_control) StdoutLine: {'line': b'                                      # \xef\xbc\x88LaneObservation.metric_reference_x_m\xef\xbc\x89\n'}
+[2.194914] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.194966] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.195018] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:178:39: E116 unexpected indentation (comment)\n'}
+[2.195068] (team4s_control) StdoutLine: {'line': b'                                      # \xef\xbc\x88LaneObservation.metric_reference_x_m\xef\xbc\x89\n'}
+[2.195118] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.195168] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.195217] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:179:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.195267] (team4s_control) StdoutLine: {'line': b'                                      # M2 \xe5\x81\x9a Stanley / \xe5\x89\x8d\xe8\xa7\x86\xe8\xa1\xa5\xe5\x81\xbf\xe6\x97\xb6\xe5\xbf\x85\xe9\xa1\xbb\xe7\x9f\xa5\xe9\x81\x93\xe8\xbf\x99\xe4\xb8\x80\xe7\x82\xb9\xef\xbc\x9a\n'}
+[2.195326] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.195375] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.195480] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:179:39: E116 unexpected indentation (comment)\n'}
+[2.195567] (team4s_control) StdoutLine: {'line': b'                                      # M2 \xe5\x81\x9a Stanley / \xe5\x89\x8d\xe8\xa7\x86\xe8\xa1\xa5\xe5\x81\xbf\xe6\x97\xb6\xe5\xbf\x85\xe9\xa1\xbb\xe7\x9f\xa5\xe9\x81\x93\xe8\xbf\x99\xe4\xb8\x80\xe7\x82\xb9\xef\xbc\x9a\n'}
+[2.195697] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.195767] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.195825] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:180:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.195880] (team4s_control) StdoutLine: {'line': b'                                      # 0.5 m \xe5\xa4\x84\xe7\x9a\x84\xe5\x81\x8f\xe5\xb7\xae\xe5\x92\x8c 1.0 m \xe5\xa4\x84\xe7\x9a\x84\xe5\x81\x8f\xe5\xb7\xae\xe4\xb8\x8d\xe8\x83\xbd\xe5\xa5\x97\xe5\x90\x8c\xe4\xb8\x80\xe6\x9d\xa1\xe5\xa2\x9e\xe7\x9b\x8a\n'}
+[2.195960] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.196029] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.196083] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:180:39: E116 unexpected indentation (comment)\n'}
+[2.196138] (team4s_control) StdoutLine: {'line': b'                                      # 0.5 m \xe5\xa4\x84\xe7\x9a\x84\xe5\x81\x8f\xe5\xb7\xae\xe5\x92\x8c 1.0 m \xe5\xa4\x84\xe7\x9a\x84\xe5\x81\x8f\xe5\xb7\xae\xe4\xb8\x8d\xe8\x83\xbd\xe5\xa5\x97\xe5\x90\x8c\xe4\xb8\x80\xe6\x9d\xa1\xe5\xa2\x9e\xe7\x9b\x8a\n'}
+[2.196191] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.196242] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.196291] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:182:39: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.196388] (team4s_control) StdoutLine: {'line': b'                                      # \xe7\x94\xa8\xe4\xba\x8e\xe8\xb5\x9b\xe5\x90\x8e\xe5\xaf\xb9\xe8\xb4\xa6\xef\xbc\x9a\xe8\xbf\x99\xe4\xb8\x80\xe8\xbd\xae\xe7\x9a\x84\xe6\x88\x90\xe7\xbb\xa9\xe6\x98\xaf\xe5\x93\xaa\xe7\x89\x88\xe6\xa0\x87\xe5\xae\x9a\xe8\xb7\x91\xe5\x87\xba\xe6\x9d\xa5\xe7\x9a\x84\n'}
+[2.196474] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.196542] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.196601] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:182:39: E116 unexpected indentation (comment)\n'}
+[2.196665] (team4s_control) StdoutLine: {'line': b'                                      # \xe7\x94\xa8\xe4\xba\x8e\xe8\xb5\x9b\xe5\x90\x8e\xe5\xaf\xb9\xe8\xb4\xa6\xef\xbc\x9a\xe8\xbf\x99\xe4\xb8\x80\xe8\xbd\xae\xe7\x9a\x84\xe6\x88\x90\xe7\xbb\xa9\xe6\x98\xaf\xe5\x93\xaa\xe7\x89\x88\xe6\xa0\x87\xe5\xae\x9a\xe8\xb7\x91\xe5\x87\xba\xe6\x9d\xa5\xe7\x9a\x84\n'}
+[2.196719] (team4s_control) StdoutLine: {'line': b'                                      ^\n'}
+[2.196771] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.196821] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:190:40: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.196871] (team4s_control) StdoutLine: {'line': b'                                       #    \xe6\x81\x92 99.0\xef\xbc\x8c\xe7\xa6\x81\xe6\xad\xa2\xe6\xb6\x88\xe8\xb4\xb9\xef\xbc\x9b\xe8\xb5\xb7\xe6\xad\xa5\xe5\x88\xa4\xe6\x8d\xae\xe5\x8f\xaa\xe7\x9c\x8b start_seen\xe3\x80\x82\n'}
+[2.196922] (team4s_control) StdoutLine: {'line': b'                                       ^\n'}
+[2.196972] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.197022] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:190:40: E116 unexpected indentation (comment)\n'}
+[2.197077] (team4s_control) StdoutLine: {'line': b'                                       #    \xe6\x81\x92 99.0\xef\xbc\x8c\xe7\xa6\x81\xe6\xad\xa2\xe6\xb6\x88\xe8\xb4\xb9\xef\xbc\x9b\xe8\xb5\xb7\xe6\xad\xa5\xe5\x88\xa4\xe6\x8d\xae\xe5\x8f\xaa\xe7\x9c\x8b start_seen\xe3\x80\x82\n'}
+[2.197127] (team4s_control) StdoutLine: {'line': b'                                       ^\n'}
+[2.197178] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.197227] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:192:37: E116 unexpected indentation (comment)\n'}
+[2.197436] (team4s_control) StdoutLine: {'line': b'                                    #    \xe2\x9a\xa0 \xe5\x8f\xaa\xe4\xbd\x9c\xe8\xae\xb0\xe5\xbf\x86/\xe6\x97\xa5\xe5\xbf\x97\xef\xbc\x9b**FINISH \xe5\x88\xa4\xe6\x8d\xae\xe7\x94\xa8 extra.red_visible_now**\n'}
+[2.197515] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.197579] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.197645] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:193:37: E116 unexpected indentation (comment)\n'}
+[2.197697] (team4s_control) StdoutLine: {'line': b'                                    #    \xef\xbc\x88\xe5\xbd\x93\xe5\x89\x8d\xe5\xb8\xa7\xe5\x8f\xaf\xe8\xa7\x81\xe6\x80\xa7\xef\xbc\x89\xef\xbc\x8c\xe5\x90\xa6\xe5\x88\x99\xe4\xbb\xbb\xe5\x8a\xa1\xe4\xb8\x80\xe8\xb5\xb7\xe6\xad\xa5\xe5\xb0\xb1\xe6\x8a\x8a\xe8\xb5\xb7\xe7\x82\xb9\xe7\xba\xa2\xe9\x94\xa5\xe5\xbd\x93\xe7\xbb\x88\xe7\x82\xb9\xe3\x80\x82\n'}
+[2.197782] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.197841] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.197892] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:195:37: E116 unexpected indentation (comment)\n'}
+[2.198045] (team4s_control) StdoutLine: {'line': b'                                    #    \xe7\xbb\x88\xe7\x82\xb9\xe5\x88\xa4\xe6\x8d\xae = \xe7\xba\xa2\xe9\x94\xa5 bbox \xe5\xba\x95\xe8\xbe\xb9\xe8\xa1\x8c\xe9\x98\x88\xe5\x80\xbc\xef\xbc\x88NodeCfg.end_trig_y2\xef\xbc\x89\xe3\x80\x82\n'}
+[2.198130] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.198326] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.198440] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:197:40: E114 indentation is not a multiple of 4 (comment)\n'}
+[2.198519] (team4s_control) StdoutLine: {'line': b'                                       #    \xe6\x96\x91\xe9\xa9\xac\xe7\xba\xbf\xe5\x88\xa4\xe6\x8d\xae = bbox \xe5\xba\x95\xe8\xbe\xb9\xe8\xa1\x8c\xe9\x98\x88\xe5\x80\xbc\xef\xbc\x88NodeCfg.zebra_trig_y2\xef\xbc\x89\xe3\x80\x82\n'}
+[2.198581] (team4s_control) StdoutLine: {'line': b'                                       ^\n'}
+[2.198634] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.198684] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:197:40: E116 unexpected indentation (comment)\n'}
+[2.198736] (team4s_control) StdoutLine: {'line': b'                                       #    \xe6\x96\x91\xe9\xa9\xac\xe7\xba\xbf\xe5\x88\xa4\xe6\x8d\xae = bbox \xe5\xba\x95\xe8\xbe\xb9\xe8\xa1\x8c\xe9\x98\x88\xe5\x80\xbc\xef\xbc\x88NodeCfg.zebra_trig_y2\xef\xbc\x89\xe3\x80\x82\n'}
+[2.198789] (team4s_control) StdoutLine: {'line': b'                                       ^\n'}
+[2.198838] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.198887] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:207:45: E116 unexpected indentation (comment)\n'}
+[2.198938] (team4s_control) StdoutLine: {'line': b'                                            #    + \xe5\x83\x8f\xe7\xb4\xa0\xe8\xa1\x8c\xe9\x98\x88\xe5\x80\xbc\xef\xbc\x89\xef\xbc\x8c\xe6\xad\xa4\xe5\xad\x97\xe6\xae\xb5\xe5\x8f\xaf\xe4\xbb\xa5\xe5\x88\xa0\xe3\x80\x82\n'}
+[2.198988] (team4s_control) StdoutLine: {'line': b'                                            ^\n'}
+[2.199039] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.199140] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:214:37: E116 unexpected indentation (comment)\n'}
+[2.199243] (team4s_control) StdoutLine: {'line': b"                                    #    \xe5\xbf\x85\xe9\xa1\xbb\xe5\x90\x8c\xe6\x97\xb6\xe7\x9c\x8b ctx.extra.ranging_state=='ok' \xe6\x89\x8d\xe5\x8f\xaf\xe4\xbf\xa1\n"}
+[2.199347] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.199408] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.199463] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:217:37: E116 unexpected indentation (comment)\n'}
+[2.199515] (team4s_control) StdoutLine: {'line': b'                                    #    \xef\xbc\x88M3 \xe5\x88\xa4\xe6\x96\xad"\xe8\x83\xbd\xe4\xb8\x8d\xe8\x83\xbd\xe7\xbb\x95\xe8\xbf\x87"\xe5\x8f\xaa\xe8\x83\xbd\xe9\x9d\xa0 left/right_clear + \xe9\x87\x8d\xe6\x96\xb0\xe5\x8b\x98\xe6\xb5\x8b\xef\xbc\x89\n'}
+[2.199567] (team4s_control) StdoutLine: {'line': b'                                    ^\n'}
+[2.199618] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.199668] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:223:36: E261 at least two spaces before inline comment\n'}
+[2.199718] (team4s_control) StdoutLine: {'line': b'    right_clear_known: bool = False # \xe2\x91\xa0 \xe7\x9b\xb4\xe8\xaf\x91\xef\xbc\x9a\xe5\x8f\xb3\xe4\xbe\xa7\xe7\xa9\xba\xe9\x97\xb4\xe6\x98\xaf\xe5\x90\xa6\xe8\xa2\xab\xe7\x9c\x9f\xe6\xad\xa3\xe6\xa3\x80\xe6\x9f\xa5\xe8\xbf\x87\n'}
+[2.199768] (team4s_control) StdoutLine: {'line': b'                                   ^\n'}
+[2.199818] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.199866] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:224:36: E261 at least two spaces before inline comment\n'}
+[2.199917] (team4s_control) StdoutLine: {'line': b'    right_clear: bool | None = None # \xe2\x91\xa0 \xe7\x9b\xb4\xe8\xaf\x91\xef\xbc\x9a\xe5\x8f\xb3\xe4\xbe\xa7\xe8\x83\xbd\xe5\x90\xa6\xe9\x80\x9a\xe8\xa1\x8c\xe3\x80\x82None = **\xe4\xb8\x8d\xe7\x9f\xa5\xe9\x81\x93**\n'}
+[2.199969] (team4s_control) StdoutLine: {'line': b'                                   ^\n'}
+[2.200092] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.200168] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:276:1: E302 expected 2 blank lines, found 1\n'}
+[2.200232] (team4s_control) StdoutLine: {'line': b'def arbitrate(candidates: dict[str, Command], table: dict[str, int]) -> Command:\n'}
+[2.200290] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.200342] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.200392] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:300:1: E302 expected 2 blank lines, found 1\n'}
+[2.200442] (team4s_control) StdoutLine: {'line': b'def want_avoid(ctx: Ctx, obst_db: bool) -> bool:\n'}
+[2.200575] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.200650] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.200713] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:305:1: E302 expected 2 blank lines, found 1\n'}
+[2.200773] (team4s_control) StdoutLine: {'line': b'def want_finish(ctx: Ctx, end_db: bool) -> bool:\n'}
+[2.200826] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.200878] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.200928] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:309:1: E302 expected 2 blank lines, found 1\n'}
+[2.200978] (team4s_control) StdoutLine: {'line': b'def want_junction(ctx: Ctx) -> bool:\n'}
+[2.201028] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.201079] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.201129] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:321:1: E302 expected 2 blank lines, found 1\n'}
+[2.201179] (team4s_control) StdoutLine: {'line': b'def snapshot_stale(last_recv_age: float, timeout: float = STALE_TIMEOUT) -> bool:\n'}
+[2.201237] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.201287] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.201335] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:67:1: F401 'contract.V_CRUISE' imported but unused\n"}
+[2.201384] (team4s_control) StdoutLine: {'line': b'from contract import (\n'}
+[2.201523] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.201626] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.201693] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:67:1: E402 module level import not at top of file\n'}
+[2.201805] (team4s_control) StdoutLine: {'line': b'from contract import (\n'}
+[2.201879] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.202031] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.202120] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:74:1: F401 'adapter_v2.g' imported but unused\n"}
+[2.202183] (team4s_control) StdoutLine: {'line': b'from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health, g\n'}
+[2.202243] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.202301] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.202416] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:74:1: E402 module level import not at top of file\n'}
+[2.202492] (team4s_control) StdoutLine: {'line': b'from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health, g\n'}
+[2.202553] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.202609] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.202661] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:75:1: E402 module level import not at top of file\n'}
+[2.202714] (team4s_control) StdoutLine: {'line': b'from task_state_bridge import (\n'}
+[2.202766] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.202816] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.202866] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:136:100: E501 line too long (100 > 99 characters)\n'}
+[2.202915] (team4s_control) StdoutLine: {'line': b'    """\n'}
+[2.202964] (team4s_control) StdoutLine: {'line': b'    \xe7\x94\xa8\xe6\xb3\x95\xef\xbc\x88ROS2 \xe8\x8a\x82\xe7\x82\xb9\xe9\x87\x8c\xef\xbc\x89:\n'}
+[2.203014] (team4s_control) StdoutLine: {'line': b'        node.m1 = M1NodeV2(task_id=1, m2=m2_track.decide, m3=m3_avoid.decide, m4=m4_slowdown.decide)\n'}
+[2.203064] (team4s_control) StdoutLine: {'line': b'        # \xe8\xae\xa2\xe9\x98\x85\xe5\x9b\x9e\xe8\xb0\x83\n'}
+[2.203113] (team4s_control) StdoutLine: {'line': b'        def on_msg(msg):\n'}
+[2.203163] (team4s_control) StdoutLine: {'line': b'            node.m1.on_snapshot(msg, node.now_s())\n'}
+[2.203213] (team4s_control) StdoutLine: {'line': b'        # timer 0.05\n'}
+[2.203335] (team4s_control) StdoutLine: {'line': b'        def tick():\n'}
+[2.203444] (team4s_control) StdoutLine: {'line': b'            node.m1.tick(node.now_s(), dt)\n'}
+[2.203506] (-) TimerEvent: {}
+[2.203524] (team4s_control) StdoutLine: {'line': b'            node.cmd_pub.publish(to_cmd(node.m1.last_cmd))\n'}
+[2.203579] (team4s_control) StdoutLine: {'line': b'            ts = node.m1.publish_task_state(node.now_ns())     # 10Hz \xe5\xbf\x83\xe8\xb7\xb3\xef\xbc\x8c\xe8\xbf\x94\xe5\x9b\x9e None \xe8\xa1\xa8\xe7\xa4\xba\xe8\xbf\x99\xe6\x8b\x8d\xe4\xb8\x8d\xe5\x8f\x91\n'}
+[2.203634] (team4s_control) StdoutLine: {'line': b'            if ts is not None:\n'}
+[2.203685] (team4s_control) StdoutLine: {'line': b'                node.ts_pub.publish(fill(TaskState(), ts))\n'}
+[2.203799] (team4s_control) StdoutLine: {'line': b'    """\n'}
+[2.203875] (team4s_control) StdoutLine: {'line': b'       \n'}
+[2.203964] (team4s_control) StdoutLine: {'line': b'                 \n'}
+[2.204061] (team4s_control) StdoutLine: {'line': b'                                                                         ^\n'}
+[2.204127] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.204181] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:527:32: E128 continuation line under-indented for visual indent\n'}
+[2.204232] (team4s_control) StdoutLine: {'line': b'                               source=source or self.ctx.state.name)\n'}
+[2.204283] (team4s_control) StdoutLine: {'line': b'                               ^\n'}
+[2.204333] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.204383] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:40:1: E402 module level import not at top of file\n'}
+[2.204443] (team4s_control) StdoutLine: {'line': b'import rclpy\n'}
+[2.204493] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.204543] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.204593] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:41:1: E402 module level import not at top of file\n'}
+[2.204679] (team4s_control) StdoutLine: {'line': b'from rclpy.node import Node\n'}
+[2.204774] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.204841] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.204899] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:42:1: E402 module level import not at top of file\n'}
+[2.204955] (team4s_control) StdoutLine: {'line': b'from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy\n'}
+[2.205007] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.205057] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.205106] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:43:1: E402 module level import not at top of file\n'}
+[2.205157] (team4s_control) StdoutLine: {'line': b'from std_msgs.msg import Bool\n'}
+[2.205206] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.205255] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.205304] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:44:1: E402 module level import not at top of file\n'}
+[2.205354] (team4s_control) StdoutLine: {'line': b'from team4s_interfaces.msg import PerceptionSnapshot, TaskState\n'}
+[2.205404] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.205455] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.205504] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:46:1: E402 module level import not at top of file\n'}
+[2.205590] (team4s_control) StdoutLine: {'line': b'from contract import STEER_CENTER, speed_to_duty\n'}
+[2.205699] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.205764] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.205819] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:47:1: E402 module level import not at top of file\n'}
+[2.205872] (team4s_control) StdoutLine: {'line': b'from m1_node_v2 import M1NodeV2, NodeCfg\n'}
+[2.205975] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.206092] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.206159] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:48:1: E402 module level import not at top of file\n'}
+[2.206216] (team4s_control) StdoutLine: {'line': b'from task_state_bridge import _fill_msg\n'}
+[2.206270] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.206321] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.206372] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:49:1: F401 'chassis_sink.ChassisSink' imported but unused\n"}
+[2.206436] (team4s_control) StdoutLine: {'line': b'from chassis_sink import ChassisSink, LogSink, NullSink\n'}
+[2.206555] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.206630] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.206691] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:49:1: E402 module level import not at top of file\n'}
+[2.206748] (team4s_control) StdoutLine: {'line': b'from chassis_sink import ChassisSink, LogSink, NullSink\n'}
+[2.206801] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.206853] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.206902] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:63:1: E402 module level import not at top of file\n'}
+[2.206953] (team4s_control) StdoutLine: {'line': b'from contract import Ctx, LaneError, NO_DETECTION, BASE_FRAME, PERCEPTION_MAX_AGE_S\n'}
+[2.207003] (team4s_control) StdoutLine: {'line': b'^\n'}
+[2.207069] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.207148] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:493:100: E501 line too long (108 > 99 characters)\n'}
+[2.207201] (team4s_control) StdoutLine: {'line': b'        if self.cfg.metric_image_size and (img_w, img_h) not in ((0, 0), tuple(self.cfg.metric_image_size)):\n'}
+[2.207263] (team4s_control) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[2.207319] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.207369] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:711:9: F841 local variable 'hstate' is assigned to but never used\n"}
+[2.207476] (team4s_control) StdoutLine: {'line': b"        hstate = int(g(h, 'state', HEALTH_MISSING) or 0)\n"}
+[2.207549] (team4s_control) StdoutLine: {'line': b'        ^\n'}
+[2.207611] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.207668] (team4s_control) StdoutLine: {'line': b'9     E114 indentation is not a multiple of 4 (comment)\n'}
+[2.207779] (team4s_control) StdoutLine: {'line': b'18    E116 unexpected indentation (comment)\n'}
+[2.207852] (team4s_control) StdoutLine: {'line': b'1     E128 continuation line under-indented for visual indent\n'}
+[2.207913] (team4s_control) StdoutLine: {'line': b'2     E221 multiple spaces before operator\n'}
+[2.207973] (team4s_control) StdoutLine: {'line': b'2     E261 at least two spaces before inline comment\n'}
+[2.208029] (team4s_control) StdoutLine: {'line': b'5     E302 expected 2 blank lines, found 1\n'}
+[2.208081] (team4s_control) StdoutLine: {'line': b'13    E402 module level import not at top of file\n'}
+[2.208133] (team4s_control) StdoutLine: {'line': b'3     E501 line too long (108 > 99 characters)\n'}
+[2.208183] (team4s_control) StdoutLine: {'line': b"3     F401 'chassis_sink.ChassisSink' imported but unused\n"}
+[2.208233] (team4s_control) StdoutLine: {'line': b"1     F841 local variable 'hstate' is assigned to but never used\n"}
+[2.208283] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.208399] (team4s_control) StdoutLine: {'line': b'13 files checked\n'}
+[2.208474] (team4s_control) StdoutLine: {'line': b'57 errors\n'}
+[2.208535] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.208591] (team4s_control) StdoutLine: {'line': b"'E'-type errors: 53\n"}
+[2.208643] (team4s_control) StdoutLine: {'line': b"'F'-type errors: 4\n"}
+[2.208697] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.208750] (team4s_control) StdoutLine: {'line': b'Checked files:\n'}
+[2.208800] (team4s_control) StdoutLine: {'line': b'\n'}
+[2.208855] (team4s_control) StdoutLine: {'line': b'* ./setup.py\n'}
+[2.208943] (team4s_control) StdoutLine: {'line': b'* ./launch/m1.launch.py\n'}
+[2.208995] (team4s_control) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[2.209045] (team4s_control) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[2.209094] (team4s_control) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[2.209144] (team4s_control) StdoutLine: {'line': b'* ./test/test_smoke.py\n'}
+[2.209194] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/contract.py\n'}
+[2.209296] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/__init__.py\n'}
+[2.209371] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/task_state_bridge.py\n'}
+[2.209452] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/chassis_sink.py\n'}
+[2.209541] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/m1_node_v2.py\n'}
+[2.209628] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/m1_node.py\n'}
+[2.209679] (team4s_control) StdoutLine: {'line': b'* ./team4s_control/adapter_v2.py\n'}
+[2.209729] (team4s_control) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[2.209780] (team4s_control) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[2.209832] (team4s_control) StdoutLine: {'line': b'_________________________________ test_pep257 __________________________________\n'}
+[2.209882] (team4s_control) StdoutLine: {'line': b'test/test_pep257.py:23: in test_pep257\n'}
+[2.210000] (team4s_control) StdoutLine: {'line': b"    assert rc == 0, 'Found code style errors / warnings'\n"}
+[2.210126] (team4s_control) StdoutLine: {'line': b'E   AssertionError: Found code style errors / warnings\n'}
+[2.210248] (team4s_control) StdoutLine: {'line': b'E   assert 1 == 0\n'}
+[2.210334] (team4s_control) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[2.210396] (team4s_control) StdoutLine: {'line': b'checking ./launch/m1.launch.py\n'}
+[2.210454] (team4s_control) StdoutLine: {'line': b"./launch/m1.launch.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.210508] (team4s_control) StdoutLine: {'line': b"./launch/m1.launch.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.210562] (team4s_control) StdoutLine: {'line': b'checking ./setup.py\n'}
+[2.210614] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/__init__.py\n'}
+[2.210664] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/adapter_v2.py\n'}
+[2.210713] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:1 at module level: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.210763] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:1 at module level: D400: First line should end with a period (not '\xe5\xb1\x82')\n"}
+[2.210815] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xe5\xb1\x82')\n"}
+[2.210868] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:167 in public class `Extra`: D204: 1 blank line required after class docstring (found 0)\n'}
+[2.210920] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:167 in public class `Extra`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.210971] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:167 in public class `Extra`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211022] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:229 in public function `g`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.211262] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:229 in public function `g`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211359] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:253 in public function `stamp_seconds`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.211428] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:253 in public function `stamp_seconds`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211489] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:275 in public method `reset_events`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.211562] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:275 in public method `reset_events`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.211615] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:275 in public method `reset_events`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211665] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:288 in public method `to_ctx`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.211715] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:288 in public method `to_ctx`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211765] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:308 in private method `_check_run_id`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.211815] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:308 in private method `_check_run_id`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.211869] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.211921] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212076] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:325 in private method `_stream_check`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212178] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.212244] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212302] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:472 in private method `_check_metric`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212358] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.212410] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212462] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:528 in private method `_pick_candidate`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212512] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:576 in private method `_hold_or_clear`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212563] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:576 in private method `_hold_or_clear`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212624] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:686 in private method `_cone_y2`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212706] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:686 in private method `_cone_y2`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212760] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:810 in public function `read_health`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.212812] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:810 in public function `read_health`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.212863] (team4s_control) StdoutLine: {'line': b'./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.212971] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D400: First line should end with a period (not ')')\n"}
+[2.213049] (team4s_control) StdoutLine: {'line': b"./team4s_control/adapter_v2.py:831 in public function `health_verdict`: D415: First line should end with a period, question mark, or exclamation point (not ')')\n"}
+[2.213175] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/chassis_sink.py\n'}
+[2.213251] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.213315] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.213384] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:24 in public class `ChassisSink`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.213445] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:24 in public class `ChassisSink`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.213497] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:31 in public class `NullSink`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.213557] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:31 in public class `NullSink`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.213619] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:47 in public class `LogSink`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.213669] (team4s_control) StdoutLine: {'line': b"./team4s_control/chassis_sink.py:47 in public class `LogSink`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.213720] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/contract.py\n'}
+[2.213879] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:1 at module level: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.214056] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.214140] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.214204] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:112 in public function `speed_to_duty`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.214263] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:112 in public function `speed_to_duty`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.214317] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:112 in public function `speed_to_duty`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.214370] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:126 in public function `duty_to_speed`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.214421] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:126 in public function `duty_to_speed`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.214471] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:234 in public method `velocity`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.214521] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:234 in public method `velocity`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.214571] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:234 in public method `velocity`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.214641] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:260 in public class `Command`: D204: 1 blank line required after class docstring (found 0)\n'}
+[2.214717] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:260 in public class `Command`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.214840] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:260 in public class `Command`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.214922] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:260 in public class `Command`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.214982] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:277 in public function `arbitrate`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.215037] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:277 in public function `arbitrate`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.215090] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:277 in public function `arbitrate`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.215147] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:277 in public function `arbitrate`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.215234] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:277 in public function `arbitrate`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.215317] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:297 in public function `want_track`: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.215378] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:297 in public function `want_track`: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.215429] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:301 in public function `want_avoid`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.215487] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:301 in public function `want_avoid`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.215536] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:306 in public function `want_finish`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.215585] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:306 in public function `want_finish`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.215635] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:310 in public function `want_junction`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.215779] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:310 in public function `want_junction`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.215850] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:310 in public function `want_junction`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.215909] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:322 in public function `snapshot_stale`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.215963] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:322 in public function `snapshot_stale`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.216016] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:322 in public function `snapshot_stale`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.216067] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:322 in public function `snapshot_stale`: D403: First word of the first line should be properly capitalized ('Snapshot', not 'snapshot')\n"}
+[2.216118] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:337 in public function `want_estop`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.216169] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:337 in public function `want_estop`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.216224] (team4s_control) StdoutLine: {'line': b'./team4s_control/contract.py:337 in public function `want_estop`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.216274] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:337 in public function `want_estop`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.216323] (team4s_control) StdoutLine: {'line': b"./team4s_control/contract.py:337 in public function `want_estop`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.216373] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/m1_node.py\n'}
+[2.216422] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.216473] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.216524] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:66 in public class `M1ControlNode`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.216576] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:66 in public class `M1ControlNode`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.216626] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:116 in private method `_now`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.216676] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node.py:116 in private method `_now`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.216725] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:116 in private method `_now`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.216774] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:116 in private method `_now`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.216824] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:164 in public method `emergency_stop`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.216874] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node.py:164 in public method `emergency_stop`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.216923] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/m1_node_v2.py\n'}
+[2.216973] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.217022] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.217165] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D204: 1 blank line required after class docstring (found 0)\n'}
+[2.217243] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.217304] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:84 in public class `NodeCfg`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.217364] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.217420] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D400: First line should end with a period (not ':')\n"}
+[2.217478] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:134 in public class `M1NodeV2`: D415: First line should end with a period, question mark, or exclamation point (not ':')\n"}
+[2.217532] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.217592] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.217654] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.217705] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D400: First line should end with a period (not '\xef\xbc\x8c')\n"}
+[2.217755] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:203 in public method `on_chassis`: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x8c')\n"}
+[2.217806] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.217857] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.217912] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D400: First line should end with a period (not '\xef\xbc\x9a')\n"}
+[2.218074] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:209 in public method `on_start_signal`: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x9a')\n"}
+[2.218152] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.218244] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.218310] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:222 in public method `on_new_run`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.218417] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.218493] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.218556] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:249 in public method `set_target_lane`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.218613] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.218667] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.218719] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:323 in private method `_confirm`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.218770] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.218821] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.218918] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:349 in private method `_end_cond`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219012] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:459 in private method `_run_behaviors`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219076] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:459 in private method `_run_behaviors`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219140] (team4s_control) StdoutLine: {'line': b'./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.219194] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219245] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:534 in public method `publish_task_state`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219296] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:543 in public method `task_state`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219345] (team4s_control) StdoutLine: {'line': b"./team4s_control/m1_node_v2.py:543 in public method `task_state`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219395] (team4s_control) StdoutLine: {'line': b'checking ./team4s_control/task_state_bridge.py\n'}
+[2.219446] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:1 at module level: D400: First line should end with a period (not '\xe5\xb8\x83')\n"}
+[2.219495] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xe5\xb8\x83')\n"}
+[2.219554] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:91 in public function `state_to_phase`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219603] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:91 in public function `state_to_phase`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219656] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.219708] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219759] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:148 in public function `state_to_mode`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.219863] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:171 in public function `generate_run_id`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.219940] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:171 in public function `generate_run_id`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.220004] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:187 in public function `generate_controller_session_id`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.220062] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:187 in public function `generate_controller_session_id`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.220169] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.220224] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.220280] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:202 in public class `TaskStatePublisher`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.220333] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:235 in public method `new_run`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.220385] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:235 in public method `new_run`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.220436] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[2.220487] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.220536] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.220587] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D400: First line should end with a period (not '\xef\xbc\x8c')\n"}
+[2.220645] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:249 in public method `set_target_lane`: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x8c')\n"}
+[2.220800] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:259 in public method `build`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.220892] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:259 in public method `build`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.220955] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:291 in public method `offer`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.221012] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:291 in public method `offer`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.221064] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:312 in private method `_reason`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.221115] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:312 in private method `_reason`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.221167] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:312 in private method `_reason`: D403: First word of the first line should be properly capitalized ('Reason', not 'reason')\n"}
+[2.221217] (team4s_control) StdoutLine: {'line': b'./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.221268] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.221333] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:342 in public function `build_task_state`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.221383] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:361 in private function `_fill_msg`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.221433] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:361 in private function `_fill_msg`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.221482] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:377 in public function `is_motion_allowed`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.221532] (team4s_control) StdoutLine: {'line': b"./team4s_control/task_state_bridge.py:377 in public function `is_motion_allowed`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.221582] (team4s_control) StdoutLine: {'line': b'checking ./test/test_copyright.py\n'}
+[2.221641] (team4s_control) StdoutLine: {'line': b'checking ./test/test_flake8.py\n'}
+[2.221691] (team4s_control) StdoutLine: {'line': b'checking ./test/test_pep257.py\n'}
+[2.221741] (team4s_control) StdoutLine: {'line': b'checking ./test/test_smoke.py\n'}
+[2.221790] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.221839] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.221889] (team4s_control) StdoutLine: {'line': b'./test/test_smoke.py:43 in public class `MockTime`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.222025] (team4s_control) StdoutLine: {'line': b'./test/test_smoke.py:43 in public class `MockTime`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.222161] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:43 in public class `MockTime`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.222255] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:43 in public class `MockTime`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.222325] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:60 in public class `MockClock`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.222441] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:60 in public class `MockClock`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.222517] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:97 in public class `MockNode`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.222581] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:97 in public class `MockNode`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.222638] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:169 in public class `MockTaskState`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.222692] (team4s_control) StdoutLine: {'line': b"./test/test_smoke.py:169 in public class `MockTaskState`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.222743] (team4s_control) StdoutLine: {'line': b'checking test/test_copyright.py\n'}
+[2.222802] (team4s_control) StdoutLine: {'line': b'checking test/test_flake8.py\n'}
+[2.222852] (team4s_control) StdoutLine: {'line': b'checking test/test_pep257.py\n'}
+[2.222901] (team4s_control) StdoutLine: {'line': b'checking test/test_smoke.py\n'}
+[2.222951] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:1 at module level: D400: First line should end with a period (not '\xef\xbc\x89')\n"}
+[2.223006] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:1 at module level: D415: First line should end with a period, question mark, or exclamation point (not '\xef\xbc\x89')\n"}
+[2.223114] (team4s_control) StdoutLine: {'line': b'test/test_smoke.py:43 in public class `MockTime`: D209: Multi-line docstring closing quotes should be on a separate line\n'}
+[2.223189] (team4s_control) StdoutLine: {'line': b'test/test_smoke.py:43 in public class `MockTime`: D213: Multi-line docstring summary should start at the second line\n'}
+[2.223252] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:43 in public class `MockTime`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.223310] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:43 in public class `MockTime`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.223363] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:60 in public class `MockClock`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.223415] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:60 in public class `MockClock`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.223465] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:97 in public class `MockNode`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.223516] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:97 in public class `MockNode`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.223594] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:169 in public class `MockTaskState`: D400: First line should end with a period (not '\xe3\x80\x82')\n"}
+[2.223685] (team4s_control) StdoutLine: {'line': b"test/test_smoke.py:169 in public class `MockTaskState`: D415: First line should end with a period, question mark, or exclamation point (not '\xe3\x80\x82')\n"}
+[2.223760] (team4s_control) StdoutLine: {'line': b'188 errors\n'}
+[2.223845] (team4s_control) StdoutLine: {'line': b'--- generated xml file: /home/mf-wsl/team4s/build/team4s_control/pytest.xml ----\n'}
+[2.223922] (team4s_control) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[2.224033] (team4s_control) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 57 code style...\n'}
+[2.224109] (team4s_control) StdoutLine: {'line': b'FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...\n'}
+[2.224171] (team4s_control) StdoutLine: {'line': b'=================== 2 failed, 1 skipped, 2 warnings in 0.91s ===================\n'}
+[2.224227] (team4s_control) StderrLine: {'line': b'=============================== warnings summary ===============================\n'}
+[2.224309] (team4s_control) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[2.224361] (team4s_control) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[2.224412] (team4s_control) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[2.224462] (team4s_control) StderrLine: {'line': b'\n'}
+[2.224512] (team4s_control) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[2.262375] (team4s_control) CommandEnded: {'returncode': 1}
+[2.263226] (team4s_control) TestFailure: {'identifier': 'team4s_control'}
+[2.263310] (team4s_control) JobEnded: {'identifier': 'team4s_control', 'rc': 0}
+[2.264482] (-) EventReactorShutdown: {}

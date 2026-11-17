@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "team4s_interfaces__py",
+		"source" : "/home/mf-wsl/team4s/build/team4s_interfaces/team4s_interfaces__py"
+	}
+}

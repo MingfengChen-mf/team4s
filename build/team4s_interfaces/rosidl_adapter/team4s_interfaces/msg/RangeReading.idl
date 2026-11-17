@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from team4s_interfaces/msg/RangeReading.msg
+// generated code does not contain a copyright notice
+
+
+module team4s_interfaces {
+  module msg {
+    struct RangeReading {
+      string sensor_id;
+
+      string sensor_frame_id;
+
+      boolean valid;
+
+      string reason;
+
+      boolean checksum_ok;
+
+      uint8 device_status_raw;
+
+      float distance_m;
+
+      uint32 signal_strength;
+
+      uint32 sensor_time_ms;
+
+      @verbatim (language="comment", text=
+        "Bearing relative to base_link only when transform has been verified.")
+      boolean bearing_known;
+
+      float bearing_rad;
+    };
+  };
+};

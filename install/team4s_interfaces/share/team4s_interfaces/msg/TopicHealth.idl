@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from team4s_interfaces/msg/TopicHealth.msg
+// generated code does not contain a copyright notice
+
+
+module team4s_interfaces {
+  module msg {
+    module TopicHealth_Constants {
+      const uint8 MISSING = 0;
+      const uint8 VALID = 1;
+      const uint8 INVALID = 2;
+      const uint8 STALE = 3;
+    };
+    struct TopicHealth {
+      uint8 state;
+
+      string reason;
+
+      boolean age_known;
+
+      float age_s;
+
+      @verbatim (language="comment", text=
+        "Must be configured > 0 before control integration; 0 = unconfigured.")
+      float max_age_s;
+    };
+  };
+};

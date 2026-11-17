@@ -1,0 +1,53 @@
+running egg_info
+creating ../../build/team4s_control/team4s_control.egg-info
+writing ../../build/team4s_control/team4s_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/team4s_control/team4s_control.egg-info/dependency_links.txt
+writing entry points to ../../build/team4s_control/team4s_control.egg-info/entry_points.txt
+writing requirements to ../../build/team4s_control/team4s_control.egg-info/requires.txt
+writing top-level names to ../../build/team4s_control/team4s_control.egg-info/top_level.txt
+writing manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'
+reading manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/team4s_control/team4s_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mf-wsl/team4s/build/team4s_control/build
+creating /home/mf-wsl/team4s/build/team4s_control/build/lib
+creating /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/contract.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/__init__.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/task_state_bridge.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/chassis_sink.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/m1_node_v2.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/m1_node.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+copying team4s_control/adapter_v2.py -> /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control
+running install
+running install_lib
+creating /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/contract.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/__init__.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/task_state_bridge.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/chassis_sink.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/m1_node_v2.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/m1_node.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+copying /home/mf-wsl/team4s/build/team4s_control/build/lib/team4s_control/adapter_v2.py -> /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/contract.py to contract.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/task_state_bridge.py to task_state_bridge.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/chassis_sink.py to chassis_sink.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/m1_node_v2.py to m1_node_v2.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/m1_node.py to m1_node.cpython-310.pyc
+byte-compiling /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control/adapter_v2.py to adapter_v2.cpython-310.pyc
+running install_data
+creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index
+creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index
+creating /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index/packages
+copying resource/team4s_control -> /home/mf-wsl/team4s/install/team4s_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/mf-wsl/team4s/install/team4s_control/share/team4s_control
+creating /home/mf-wsl/team4s/install/team4s_control/share/team4s_control/launch
+copying launch/m1.launch.py -> /home/mf-wsl/team4s/install/team4s_control/share/team4s_control/launch
+running install_egg_info
+Copying ../../build/team4s_control/team4s_control.egg-info to /home/mf-wsl/team4s/install/team4s_control/lib/python3.10/site-packages/team4s_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing m1_node script to /home/mf-wsl/team4s/install/team4s_control/lib/team4s_control
+writing list of installed files to '/home/mf-wsl/team4s/build/team4s_control/install.log'
