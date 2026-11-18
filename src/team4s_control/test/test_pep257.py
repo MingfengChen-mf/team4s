@@ -19,5 +19,10 @@ import pytest
 @pytest.mark.linter
 @pytest.mark.pep257
 def test_pep257():
-    rc = main(argv=['.', 'test'])
+    # --add-ignore 依据 README「linter（11.18 更新）」节：
+    #   D400/D415 —— 中文句号「。」/「）」不被英文 linter 识别，属误判，不改中文 docstring；
+    #   D213/D205/D209/D204/D403 —— 核心四文件（contract/adapter_v2/m1_without_ros2_node/
+    #   task_state_bridge）需与 Windows 基准 m1-改进v2/ 哈希一致，docstring 版式保持现状。
+    rc = main(argv=['.', 'test', '--add-ignore',
+                    'D400', 'D415', 'D213', 'D205', 'D209', 'D204', 'D403'])
     assert rc == 0, 'Found code style errors / warnings'

@@ -1,6 +1,6 @@
 # team4s M1 ROS 2 执行外壳
 
-M1 决策内核（contract.py / adapter_v2.py / m1_node_v2.py / task_state_bridge.py，外壳只读引用、运行时不改）
+M1 决策内核（contract.py / adapter_v2.py / m1_without_ros2_node.py / task_state_bridge.py，外壳只读引用、运行时不改）
 的 ROS 2 套壳：订阅感知聚合快照 → 驱动内核 → 发布 TaskState → 底盘命令经 ChassisSink 抽象落地；
 底盘转速反馈经共享内存回读注入内核。
 
@@ -19,7 +19,7 @@ M1 决策内核（contract.py / adapter_v2.py / m1_node_v2.py / task_state_bridg
 | `src/team4s_control/team4s_control/chassis_sink.py` | 底盘输出抽象（NullSink / LogSink / SharedMemSink）【11.18 重写】 |
 | `src/team4s_control/launch/m1.launch.py` | launch（ROS_DOMAIN_ID 参数化，默认 111） |
 | `src/team4s_control/test/test_smoke.py` | 第一层自检③：无 ROS 冒烟测试 |
-| `src/team4s_control/team4s_control/{contract,adapter_v2,m1_node_v2,task_state_bridge}.py` | 四核心工作副本（**11.18 版**：lint 整改 + 雷达适配，与 m1-改进v2/ 基准一致） |
+| `src/team4s_control/team4s_control/{contract,adapter_v2,m1_without_ros2_node,task_state_bridge}.py` | 四核心工作副本（**11.18 版**：lint 整改 + 雷达适配，与 m1-改进v2/ 基准一致；m1_node_v2.py 已改名 m1_without_ros2_node.py） |
 
 另按（13）坑 5 补了 `package.xml` 的 `std_msgs` 依赖；`setup.py` 增加了
 `m1_node` console_script 与 launch 安装。运行时产物：`m1_chassis_commands.csv`
@@ -82,12 +82,12 @@ python3 -m py_compile ~/team4s/src/team4s_control/team4s_control/*.py \
   ~/team4s/src/team4s_control/launch/*.py
 # ② 核心副本同步校验（基准 m1-改进v2/ 的 11.18 版；沿用旧哈希基线需重新采集）
 cd ~/team4s/src/team4s_control/team4s_control && \
-  sha256sum contract.py adapter_v2.py m1_node_v2.py task_state_bridge.py
+  sha256sum contract.py adapter_v2.py m1_without_ros2_node.py task_state_bridge.py
 # ③ 冒烟测试（mock 最小面 = 外壳实际用到的符号；核心零 rclpy import）
 python3 ~/team4s/src/team4s_control/test/test_smoke.py
 # ④ 接口存在性抽查
 grep -n "def on_snapshot\|def tick\|def publish_task_state\|def on_start_signal" \
-  ~/team4s/src/team4s_control/team4s_control/m1_node_v2.py
+  ~/team4s/src/team4s_control/team4s_control/m1_without_ros2_node.py
 ```
 
 ## 第二层集成自检（15）（WSL Humble，全部实际执行通过）
@@ -263,5 +263,8 @@ reason 里 `deg:run_id_mismatch`（伪造 run_id≠节点 run_id，warn 策略�
   **未在任何位置使用 X | Y、dict[str, int] 等 3.9+ 新语法**（比"仅注解位置"的底线更保守）。
 - **linter（11.18 更新）**&#8203;：核心四文件已整改完毕，`flake8(99)` **0 错误**（原「零改动不可修」
   结论作废）；E402 以 `# noqa: E402` 精确豁免（任务书 (10) 强制的 sys.path bootstrap 副作用，
-  核心与外壳同此处理）。pep257 建议在 `test/test_pep257.py` 用 `--add-ignore D400,D415`
-  豁免中文句号，不改中文 docstring。壳层新文件 F401/F841 已清零。
+  核心与外壳同此处理）。pep257 已在 `test/test_pep257.py` 用 `--add-ignore D400,D415,
+  D213,D205,D209,D204,D403` 豁免（11.18 实测 220 条全属此类）：D400/D415 是中文句号「。」/「）」
+  误判，不改中文 docstring；D213/D205/D209/D204/D403 是 docstring 版式，核心四文件需与
+  Windows 基准 m1-改进v2/ 哈希一致（自检②），保持现状。colcon test 现全绿（flake8/pep257 过，
+  copyright 按模板默认 skip）。壳层新文件 F401/F841 已清零。
