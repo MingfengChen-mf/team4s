@@ -8,6 +8,9 @@ m1_node.py —— M1 决策内核的 ROS 2 执行外壳（节点名 m1_control�
     → m1.publish_task_state(now_ns) 非 None 才 _fill_msg(TaskState(), ts) → publish
   订阅 /team4s/control/start（std_msgs/Bool，临时入口、不是遥控信号，可移除）
     → msg.data is True 时 m1.on_start_signal('topic')
+  后台线程读 /dev/shm/2py_to_chassis.dat（厂家底盘脚本写的 motor_rpm）
+    → timer 单线程取出 → m1.on_chassis(rpm) → tick() 回填 ctx.chassis.speed_rpm
+    详情见 chassis_feedback.py；底盘没有 ROS2 节点，反馈只走共享内存。
 
 dt 规则（任务书 (6)，外壳最容易写错处）：
   · 仅当上一拍 now_s 为 None（首拍）时 dt 取 nominal_dt（参数，默认 0.05）；
@@ -37,16 +40,19 @@ for _p in (_HERE, _ROOT):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-import rclpy
-from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
-from std_msgs.msg import Bool
-from team4s_interfaces.msg import PerceptionSnapshot, TaskState
+import rclpy  # noqa: E402
+from rclpy.node import Node  # noqa: E402
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy  # noqa: E402
+from std_msgs.msg import Bool  # noqa: E402
+from team4s_interfaces.msg import PerceptionSnapshot, TaskState  # noqa: E402
 
-from contract import STEER_CENTER, speed_to_duty
-from m1_without_ros2_node import M1NodeV2, NodeCfg
-from task_state_bridge import _fill_msg
-from chassis_sink import LogSink, NullSink
+from contract import STEER_CENTER, speed_to_duty  # noqa: E402
+# 裸 import：包内实际文件是 m1_without_ros2_node.py（Kimi 将 m1_node_v2.py 改名而来）。
+# 不要用 team4s.src... 完整路径——install 后没有 team4s/src 这一层。
+from m1_without_ros2_node import M1NodeV2, NodeCfg  # noqa: E402
+from task_state_bridge import _fill_msg  # noqa: E402
+from chassis_sink import LogSink, NullSink, SharedMemSink, DEFAULT_CMD_PATH  # noqa: E402
+from chassis_feedback import FeedbackReader, DEFAULT_FEEDBACK_PATH  # noqa: E402
 
 # QoS 必须显式声明，不许用默认值（任务书 (5)(13) 坑 1：QoS 不匹配是静默的，
 # 只有一条 warning）。RELIABLE / VOLATILE / KEEP_LAST / depth 1，订阅发布同一口径。
@@ -72,8 +78,12 @@ class M1ControlNode(Node):
         self.declare_parameter('task_id', 1)        # 1=单圈，2=直道
         self.declare_parameter('target_lane', 1)    # 1=FIRST 主路左，2=SECOND 主路右
         self.declare_parameter('nominal_dt', 0.05)  # 仅首拍 dt 用（任务书 (6)）
-        self.declare_parameter('sink', 'log')       # 'log'=LogSink(CSV)，其他=NullSink
+        self.declare_parameter('sink', 'log')       # 'log'=CSV留证 / 'shm'=真实下发 / 其他=NullSink
         self.declare_parameter('log_path', '')      # LogSink CSV 路径，空=cwd 下默认名
+        self.declare_parameter('cmd_shm', DEFAULT_CMD_PATH)  # SharedMemSink 命令共享内存路径
+        self.declare_parameter('feedback_enabled', True)      # 底盘反馈共享内存
+        self.declare_parameter('feedback_shm', DEFAULT_FEEDBACK_PATH)
+        self.declare_parameter('feedback_hz', 20.0)           # 读反馈频率
         task_id = int(self.get_parameter('task_id').value)
         target_lane = int(self.get_parameter('target_lane').value)
         self._nominal_dt = float(self.get_parameter('nominal_dt').value)
@@ -82,9 +92,16 @@ class M1ControlNode(Node):
 
         self.m1 = M1NodeV2(task_id=task_id, target_lane=target_lane, cfg=NodeCfg())
 
+        # 底盘反馈：厂家底盘脚本写共享内存（无 ROS2 节点可读），后台线程轮询。
+        # 线程只投递 rpm，真正调 on_chassis 放在 timer 里，保证内核调用单线程串行。
+        self._feedback = None
+        if bool(self.get_parameter('feedback_enabled').value):
+            self._feedback = FeedbackReader(
+                path=str(self.get_parameter('feedback_shm').value),
+                hz=float(self.get_parameter('feedback_hz').value))
+            self._feedback.start()
+
         # TODO 未接线的内核入口（任务书 (7)，写明用途与将来触发方式，不许自行发明来源）：
-        # · on_chassis(speed_rpm)：底盘转速回传。当前底盘不发布该话题，没有真实来源；
-        #   将来底盘方加 publisher 后，在其订阅回调里调 self.m1.on_chassis(msg.data)。
         # · on_new_run(attempt, task_id, target_lane)：人工复位开新一轮用；将来由
         #   裁判/操作员的显式指令（终端/服务）触发。
         # · set_target_lane(lane)：任务二避障后切 SECOND 车道用。内核不会自动切，
@@ -93,6 +110,9 @@ class M1ControlNode(Node):
 
         if sink_type == 'log':
             self.sink = LogSink(log_path)   # log_path 为空时 LogSink 自选 cwd 默认名
+        elif sink_type == 'shm':
+            # 真实下发：厂家脚本轮询 servo_shared.dat（格式 'if'），详情见 chassis_sink.py
+            self.sink = SharedMemSink(str(self.get_parameter('cmd_shm').value))
         else:
             self.sink = NullSink()
 
@@ -145,6 +165,12 @@ class M1ControlNode(Node):
             dt = now_s - self._last_now_s
         self._last_now_s = now_s
 
+        # 反馈注入必须在 tick() 之前：tick 里才把 speed_rpm_fb 回填到
+        # ctx.chassis.speed_rpm；放后面这一拍的 velocity 会是上一拍的旧值。
+        rpm = self._feedback.take_rpm() if self._feedback is not None else None
+        if rpm is not None:
+            self.m1.on_chassis(rpm)
+
         self.m1.tick(now_s, dt)
 
         # 底盘下发：speed 单位 m/s，下发前必须过 speed_to_duty() 转成占空比
@@ -163,6 +189,10 @@ class M1ControlNode(Node):
     def emergency_stop(self):
         """退出前安全停车：真实底盘没有超时保护，必须发一条回中+零速。"""
         self.sink.write(STEER_CENTER, 0.0, 'estop')
+        # 先发急停再停读线程，避免关闭过程拖住安全命令。
+        if self._feedback is not None:
+            self._feedback.close()
+        self.sink.close()
 
 
 def main(args=None):

@@ -64,15 +64,15 @@ for _p in (_HERE, _ROOT):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from contract import (
+from contract import (  # noqa: E402
     State, Ctx, Command, arbitrate, LAT_PRIORITY, LON_PRIORITY,
     STEER_CENTER, RPM2VEL,
-    V_CRUISE, V_SLOW,
+    V_SLOW,
     LINE_LOST_TIMEOUT, AVOID_TIMEOUT, JUNCTION_TIMEOUT, SLOWDOWN_TIMEOUT,
     STALE_TIMEOUT, OBST_TRIG, TASK_STATE_PERIOD_S,
 )
-from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health, g
-from task_state_bridge import (
+from adapter_v2 import Adapter, AdapterCfg, health_verdict, read_health  # noqa: E402
+from task_state_bridge import (  # noqa: E402
     TaskStatePublisher,
     TASK_LAP, TASK_STRAIGHT, LANE_FIRST,
 )
@@ -112,6 +112,10 @@ class NodeCfg:
     obst_clear_m: float = 1.60        # 退出滞环
     avoid_retry_stop_s: float = 1.2
     max_avoid_retry: int = 3
+    # 视觉锥桶兜底避障的触发行（与 AdapterCfg.vision_obstacle_y2_trig 配套）。
+    # 只有 adapter 明确给出 obstacle_source=='vision_cone' 时才用像素行判据；
+    # 雷达正常时永远走 dist<OBST_TRIG 的米制判据，两条互不干扰。
+    vision_avoid_y2: float = 150.0
 
     # --- 降级限速 ---
     # 取 V_SLOW：巡航 0.385（20261116 满电标定），V_SLOW 0.25 比它低 35%，降级可观察到。
@@ -133,7 +137,8 @@ class NodeCfg:
 class M1NodeV2:
     """
     用法（ROS2 节点里）:
-        node.m1 = M1NodeV2(task_id=1, m2=m2_track.decide, m3=m3_avoid.decide, m4=m4_slowdown.decide)
+        node.m1 = M1NodeV2(task_id=1, m2=m2_track.decide,
+                           m3=m3_avoid.decide, m4=m4_slowdown.decide)
         # 订阅回调
         def on_msg(msg):
             node.m1.on_snapshot(msg, node.now_s())
@@ -391,7 +396,17 @@ class M1NodeV2:
                     self.zebra_last_t = self.now
                 self._enter(State.SLOWDOWN)
                 return
-            if self.ctx.obstacle.present and self.ctx.obstacle.dist < OBST_TRIG:
+            # 障碍触发：雷达米制判据优先；雷达不用时走视觉锥桶像素行兜底。
+            # 两路都要求 adapter 已确认 present，且来源口径明确，避免"不知道被当成有障碍"。
+            ex = self.ctx.extra
+            range_hit = (ex.obstacle_source != 'vision_cone'
+                         and self.ctx.obstacle.present
+                         and self.ctx.obstacle.dist < OBST_TRIG)
+            vision_hit = (ex.obstacle_source == 'vision_cone'
+                          and self.ctx.obstacle.present
+                          and ex.vision_obstacle_y2 is not None
+                          and ex.vision_obstacle_y2 >= self.cfg.vision_avoid_y2)
+            if range_hit or vision_hit:
                 # 修订 A：**不再**把 target_lane 改成 2。绕障后回归的是同一条主车道；
                 # FIRST/SECOND 是车道身份（左/右），不是"避障前/后"。
                 self.avoid_retry = 0
@@ -420,11 +435,21 @@ class M1NodeV2:
             return
 
         if s is State.AVOID:
-            clear = (not self.ctx.obstacle.present) \
-                or self.ctx.obstacle.dist > self.cfg.obst_clear_m
-            if clear:
-                self._enter(State.TRACK)
-                return
+            ex = self.ctx.extra
+            if ex.obstacle_source == 'vision_cone':
+                # 视觉兜底退出：障碍锥离开视野（本拍不再命中）即认为已绕过，
+                # 或终点红锥已出现（避免把终点当障碍一直绕，直接让位给 FINISH）。
+                cone_gone = (not self.ctx.obstacle.present)
+                at_finish = bool(ex.red_visible_now)
+                if cone_gone or at_finish:
+                    self._enter(State.TRACK)
+                    return
+            else:
+                clear = (not self.ctx.obstacle.present) \
+                    or self.ctx.obstacle.dist > self.cfg.obst_clear_m
+                if clear:
+                    self._enter(State.TRACK)
+                    return
             if self.state_timer > AVOID_TIMEOUT:
                 self.avoid_retry += 1
                 if self.avoid_retry > self.cfg.max_avoid_retry:
@@ -524,7 +549,7 @@ class M1NodeV2:
 
     def _emit(self, speed, steer, source):
         self.last_cmd = Command(steer=int(steer), speed=float(speed or 0.0),
-                               source=source or self.ctx.state.name)
+                                source=source or self.ctx.state.name)
         return self.last_cmd
 
     # ---------------------------------------------------------------

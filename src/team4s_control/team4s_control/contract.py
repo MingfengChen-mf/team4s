@@ -6,7 +6,7 @@ contract.py —— 智能小车规控系统消息契约 v1.0（机器可读版�
     from contract import State, Ctx, Command, LAT_PRIORITY, LON_PRIORITY, ...
 """
 
-from __future__ import annotations   # Py3.8 兼容：float | None / dict[str, ...] 等仅作字符串注解（Foxy 容器 Py3.8）
+from __future__ import annotations   # Py3.8 兼容：新语法仅作字符串注解（Foxy 容器）
 
 from dataclasses import dataclass, field
 from enum import Enum, auto
@@ -73,7 +73,7 @@ SLOWDOWN_TIMEOUT = 5.0
 ZEBRA_TRIG = 0.25      # [已弃用于转移判定] 斑马线前减速触发距离 m
 ZEBRA_EXIT = 1.5       # [已弃用于转移判定] 减速退出距离 m
 OBST_TRIG = 1.2        # 避障触发距离 m（= 变道起点 1.80m 的提前量）；此项**仍在使用**，
-                       # 因为障碍距离来自 RangeReading.distance_m 的真实米值，不是推算
+# 因为障碍距离来自 RangeReading.distance_m 的真实米值，不是推算
 START_TRIG = 1.0       # 绿锥启动距离 m（未使用：感知不提供锥桶距离）
 END_TRIG = 0.5         # [已弃用于转移判定] 终点标记判定距离 m
 # --- 速度：单位统一为 m/s（20261116 修正：换用满电三档实测标定）---
@@ -81,11 +81,11 @@ END_TRIG = 0.5         # [已弃用于转移判定] 终点标记判定距离 m
 # 依据 AI_HANDOFF_20261116 §1 calibration（满电）：duty 0.06/0.08/0.10 → 0.186/0.385/0.604 m/s。
 # 旧值（20261113 单点：duty 0.08 → 0.33）保留在行尾备查；满电标定待重复实验复测后敲定。
 V_CRUISE = 0.385       # 巡航（20261116 满电实测 duty 0.08；旧值 0.33）
-V_SLOW   = 0.25        # 减速目标，约巡航的 65%（降幅 35%；HANDOFF §10 T2 验收要求降幅≥30%）
-V_AVOID  = 0.29        # 避障，维持原比例约巡航的 76%（旧 0.25/0.33）
+V_SLOW = 0.25          # 减速目标，约巡航的 65%（降幅 35%；HANDOFF §10 T2 验收要求降幅≥30%）
+V_AVOID = 0.29         # 避障，维持原比例约巡航的 76%（旧 0.25/0.33）
 BRAKE_TRIG = 0.10      # 终点前开始制动距离 m（HANDOFF §1：0.385m/s 总停车距离实测 0.10m；
-                       # 旧值 0.19 按旧减速度 0.40m/s² 外推，会让车提前停 8~9cm，
-                       # 过不了 ±5cm —— HANDOFF §0 结论二。实测制动距离 0.044m @duty 0.08）
+# 旧值 0.19 按旧减速度 0.40m/s² 外推，会让车提前停 8~9cm，
+# 过不了 ±5cm —— HANDOFF §0 结论二。实测制动距离 0.044m @duty 0.08）
 E_LAT_LIMIT = 0.06     # 半车道余量 m（车宽 18cm、单车道 30cm：(30-18)/2 = 6cm）
 BRANCH_REJECT_DEG = 25.0   # 支线拒绝角 |Δψ| 阈值（P1 用）
 
@@ -159,9 +159,9 @@ class LaneError:                    # 车道信息（adapter 从感知组 LaneOb
     # --- contract_v1 原始字段（稳定，行为模块主要读这些）---
     track_err: float = 0.0          # cm，正=偏右，相对当前车道中心（② 来源见 unit）
     curvature: float = 0.0          # ⛔ ④ 无来源：感知组 v2 不提供曲率。
-                                    #    恒 0，**不可当前馈用**。要算必须先有米值：
-                                    #    在米域拟合多项式取 C2（单位 1/m），像素域的
-                                    #    "图像曲率"差一个随距离变的透视因子，不能替代。
+    #    恒 0，**不可当前馈用**。要算必须先有米值：
+    #    在米域拟合多项式取 C2（单位 1/m），像素域的
+    #    "图像曲率"差一个随距离变的透视因子，不能替代。
     track_valid: bool = False       # 丢线时保持最后有效值，不得清零
 
     # --- adapter 附加字段（来自感知组 LaneCandidate，非 contract_v1 原始定义）---
@@ -175,11 +175,11 @@ class LaneError:                    # 车道信息（adapter 从感知组 LaneOb
     # 字段全部是感知组消息里的原值，M1 不做任何运算：
     unit: str = 'cm'                  # 'cm'（感知批准米值）| 'px'（米制未批准，透传像素）
     ref_x_m: float | None = None      # 该横向偏差对应的**前方参考点**前向距离 m
-                                      # （LaneObservation.metric_reference_x_m）
-                                      # M2 做 Stanley / 前视补偿时必须知道这一点：
-                                      # 0.5 m 处的偏差和 1.0 m 处的偏差不能套同一条增益
+    # （LaneObservation.metric_reference_x_m）
+    # M2 做 Stanley / 前视补偿时必须知道这一点：
+    # 0.5 m 处的偏差和 1.0 m 处的偏差不能套同一条增益
     calib_id: str = ''                # 标定版本号（LaneObservation.calibration_id），
-                                      # 用于赛后对账：这一轮的成绩是哪版标定跑出来的
+    # 用于赛后对账：这一轮的成绩是哪版标定跑出来的
 
 
 @dataclass
@@ -187,14 +187,14 @@ class EventFlags:                   # 场景事件（adapter 从感知组 SceneO
     # --- contract_v1 原始字段（稳定，M1 状态转移条件读这些）---
     start_seen: bool = False        # ③ 派生：cone_state==REMOVED 且本轮曾见绿锥（锁存）
     start_dist: float = NO_DETECTION   # ⛔ ④ 无来源：v2 消息里没有锥桶距离字段。
-                                       #    恒 99.0，禁止消费；起步判据只看 start_seen。
+    #    恒 99.0，禁止消费；起步判据只看 start_seen。
     end_seen: bool = False          # ③ 派生：red_finish_confirmed 锁存 = "本轮曾确认过终点"。
-                                    #    ⚠ 只作记忆/日志；**FINISH 判据用 extra.red_visible_now**
-                                    #    （当前帧可见性），否则任务一起步就把起点红锥当终点。
+    #    ⚠ 只作记忆/日志；**FINISH 判据用 extra.red_visible_now**
+    #    （当前帧可见性），否则任务一起步就把起点红锥当终点。
     end_dist: float = NO_DETECTION  # ⛔ ④ 无来源：v2 没有终点距离字段。恒 99.0，禁止消费。
-                                    #    终点判据 = 红锥 bbox 底边行阈值（NodeCfg.end_trig_y2）。
+    #    终点判据 = 红锥 bbox 底边行阈值（NodeCfg.end_trig_y2）。
     zebra_dist: float = NO_DETECTION   # ⛔ ④ 无来源：v2 没有斑马线距离字段。恒 99.0，禁止消费。
-                                       #    斑马线判据 = bbox 底边行阈值（NodeCfg.zebra_trig_y2）。
+    #    斑马线判据 = bbox 底边行阈值（NodeCfg.zebra_trig_y2）。
     junction: bool = False          # ③ 派生：lane.is_branch && lane.track_valid
 
     # --- adapter 附加字段（来自感知组 SceneObservation，非 contract_v1 原始定义）---
@@ -204,24 +204,24 @@ class EventFlags:                   # 场景事件（adapter 从感知组 SceneO
     zebra_confirmed: bool = False   # ① 直译：斑马线事件是否已确认（事件去重用）
     zebra_event_id: int = 0         # ① 直译：斑马线事件 ID（与 run/session 组三元组去重）
     end_detection_unresolved: bool = False  # ⛔ ④ 空壳：从未被赋值。终点方案已定（红锥事件
-                                            #    + 像素行阈值），此字段可以删。
+    #    + 像素行阈值），此字段可以删。
 
 
 @dataclass
 class ObstacleInfo:                 # 障碍信息（adapter 从感知组 ObstacleObservation 填充）
     # --- contract_v1 原始字段（稳定，M3 避障主要读这些）---
     dist: float = NO_DETECTION      # ② 换算：逐条过滤后中位数聚合；未检出=99.0
-                                    #    必须同时看 ctx.extra.ranging_state=='ok' 才可信
+    #    必须同时看 ctx.extra.ranging_state=='ok' 才可信
     angle: float = 0.0              # ② 换算：bearing_rad×180/π，正=偏右；bearing_known=false 时为 0
     width: float = 0.0              # ⛔ ④ 无来源：感知组不提供障碍宽度。恒 0，禁止消费
-                                    #    （M3 判断"能不能绕过"只能靠 left/right_clear + 重新勘测）
+    #    （M3 判断"能不能绕过"只能靠 left/right_clear + 重新勘测）
     present: bool = False           # ③ 派生：至少一条读数通过过滤 + 3 帧内 2 次一致
 
     # --- adapter 附加字段（来自感知组 ObstacleObservation，非 contract_v1 原始定义）---
     left_clear_known: bool = False  # ① 直译：左侧空间是否被真正检查过
     left_clear: bool | None = None  # ① 直译：左侧能否通行。None = **不知道**（不是"能走"）
-    right_clear_known: bool = False # ① 直译：右侧空间是否被真正检查过
-    right_clear: bool | None = None # ① 直译：右侧能否通行。None = **不知道**
+    right_clear_known: bool = False  # ① 直译：右侧空间是否被真正检查过
+    right_clear: bool | None = None  # ① 直译：右侧能否通行。None = **不知道**
     readings: list = field(default_factory=list)  # ① 直译：原始 RangeReading[]（M3 细节分析用）
 
 
@@ -273,6 +273,7 @@ class Command:
 LAT_PRIORITY = {"ESTOP": 99, "AVOID": 50, "JUNCTION": 30, "TRACK": 10}
 LON_PRIORITY = {"ESTOP": 99, "FINISH": 50, "SLOWDOWN": 30, "TRACK": 10, "AVOID": 10}
 
+
 def arbitrate(candidates: dict[str, Command], table: dict[str, int]) -> Command:
     """candidates: {行为名: Command}，按 table 优先级取赢家。
     铁律：无赢家/全 None → 零速，不沿用上一拍。"""
@@ -297,14 +298,17 @@ def want_track(ctx: Ctx, zebra_db: bool, zebra_frames: int) -> bool:
     """TRACK -> SLOWDOWN：防抖由调用方维护，此处只判阈值。（参考实现，见上方说明）"""
     return ctx.state is State.TRACK and zebra_db and ctx.events.zebra_dist < ZEBRA_TRIG
 
+
 def want_avoid(ctx: Ctx, obst_db: bool) -> bool:
     """TRACK -> AVOID。障碍距离是真实米值（RangeReading.distance_m），此项仍有效。"""
     return ctx.state is State.TRACK and obst_db and ctx.obstacle.present \
         and ctx.obstacle.dist < OBST_TRIG
 
+
 def want_finish(ctx: Ctx, end_db: bool) -> bool:
     """TRACK -> FINISH（参考实现）。真实判据见 NodeCfg.end_trig_y2 + 红锥当前可见。"""
     return ctx.state is State.TRACK and end_db and ctx.events.end_dist < END_TRIG
+
 
 def want_junction(ctx: Ctx) -> bool:
     """TRACK -> JUNCTION。
@@ -317,6 +321,7 @@ def want_junction(ctx: Ctx) -> bool:
     米制距离当门；同时排除 AVOID 期间（避障时不判分叉，评分 2.4 允许短暂跨线）。
     """
     return (ctx.state is not State.AVOID) and ctx.events.junction
+
 
 def snapshot_stale(last_recv_age: float, timeout: float = STALE_TIMEOUT) -> bool:
     """snapshot 接收超时看门狗（感知组文档明文要求）。
